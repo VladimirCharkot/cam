@@ -2,15 +2,22 @@ extends layout
 
 
 block cabecera
-  .portada
-    .telon
-      .titulo
-        h1 Convención Argentina de Malabares
-      .flechita
-      .logo
-    video(autoplay=true loop=true)
-      source(src="/video/portada-2.mp4" type="video/mp4")
-  //- div(style="width: 100vw; height: 100vh")
+  if celu
+    .portada
+      .telon
+        .titulo
+          h1 Convención Argentina de Malabares
+        .flechita
+        .logo
+  else
+    .portada
+      .telon
+        .titulo
+          h1 Convención Argentina de Malabares
+        .flechita
+        .logo
+      video(autoplay=true loop=true)
+        source(src="/video/portada-2.mp4" type="video/mp4")
 
 block contenido
 

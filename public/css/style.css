@@ -75,6 +75,10 @@ video {
     .menu a:hover {
       background: #e9ffff; }
 
+@media screen and (max-width: 650px) {
+  .menu a {
+    font-size: 2em; } }
+
 .articulo {
   padding: 0 10vw; }
   .articulo .cabecera h2 {
