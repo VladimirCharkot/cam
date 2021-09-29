@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap");
+@font-face {
+  font-family: Lulo;
+  src: url("/fonts/lulo-clean/Lulo Clean One Bold.otf") format("opentype"); }
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden; }
+
+.portada {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; }
+  .portada .telon {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/img/trama.webp);
+    z-index: 1;
+    overflow: hidden; }
+    .portada .telon .titulo {
+      text-shadow: rgba(10, 189, 240, 0.298039) 3px 3px 0px, rgba(254, 1, 1, 0.298039) -3px -3px 0px;
+      text-align: center;
+      font: 1.5em 'Lulo';
+      color: white;
+      width: 50vw;
+      position: absolute;
+      top: 30vh;
+      left: 7vw; }
+    .portada .telon .flechita {
+      position: absolute;
+      bottom: 5em;
+      left: 5em;
+      width: 1em;
+      height: 1em;
+      border-left: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-right: 20px solid #fff;
+      border-top: 20px solid #fff;
+      transform: rotate(135deg);
+      background: transparent;
+      box-shadow: 4px -4px 3px #acacac; }
+    .portada .telon .logo {
+      position: absolute;
+      width: 15vw;
+      height: 23.2vh;
+      background-image: url(/img/logo19.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      bottom: 2em;
+      right: 3em; }
+
+.menu {
+  background: white;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around; }
+  .menu a {
+    display: block;
+    flex-grow: 1;
+    text-align: center;
+    padding: 2em 0;
+    transition: 0.5s; }
+    .menu a:hover {
+      background: #e9ffff; }
+
+.articulo {
+  padding: 0 10vw; }
+  .articulo .cabecera h2 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 2em; }
+  .articulo .texto {
+    padding: 0 2em;
+    text-align: justify; }
+  .articulo img {
+    width: 80vw;
+    margin: 0 auto; }
+
+.redes {
+  height: 30vh; }
+
+.encolumnado {
+  display: flex;
+  margin: 8em 0em; }
+  .encolumnado div {
+    width: 30vw;
+    padding: 0 5vw; }
+    .encolumnado div h3 {
+      font-size: 2em;
+      margin: 0; }
+
+#cuete .foto {
+  background-image: url(/img/orga/cuete.jpg);
+  background-position: 50% 0%;
+  background-size: 400%; }
+
+#luci .foto {
+  background-image: url(/img/orga/luci.jpg);
+  background-position: center;
+  background-size: 200%; }
+
+#seba .foto {
+  background-image: url(/img/orga/seba.jpg);
+  background-position: center;
+  background-size: 150%; }
+
+#euge .foto {
+  background-image: url(/img/orga/euge.jpg);
+  background-position: 85% 50%;
+  background-size: 400%; }
+
+#maca .foto {
+  background-image: url(/img/orga/maca.jpg);
+  background-position: 50% 80%;
+  background-size: 200%; }
+
+#gabi .foto {
+  background-image: url(/img/orga/gabi.jpg);
+  background-position: 70% 30%;
+  background-size: 160%; }
+
+#esteban .foto {
+  background-image: url(/img/orga/esteban.jpg);
+  background-position: center;
+  background-size: 140%; }
+
+#sofi .foto {
+  background-image: url(/img/orga/sofi.jpg);
+  background-position: center;
+  background-size: 100%; }
+
+#vladi .foto {
+  background-image: url(/img/orga/vladi.jpg);
+  background-position: center;
+  background-size: 260%; }
+
+.integrante {
+  margin: 10vw 20vw;
+  position: relative; }
+  .integrante h3 {
+    font-size: 2em;
+    padding-left: 2.8em; }
+  .integrante .foto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10vw;
+    height: 10vw;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-5vw, -3vw);
+    border: 2px solid black; }
+  .integrante p {
+    margin-left: 5vw; }
+  .integrante * {
+    transition: 0.7s; }
+  .integrante:hover .foto {
+    transform: translate(-7vw, -3vw); }
+  .integrante:hover h3 {
+    transform: translateY(-1vw); }
+  .integrante:hover p {
+    transform: translateX(1vw); }
+
+body {
+  padding: 0;
+  margin: 0;
+  font: 14px "Montserrat", Helvetica, Arial, sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden; }
+
+a {
+  color: #00B7FF;
+  text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */

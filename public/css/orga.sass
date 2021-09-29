@@ -1,0 +1,76 @@
+#cuete .foto
+  background-image: url(/img/orga/cuete.jpg)
+  background-position: 50% 0%
+  background-size: 400%
+
+#luci .foto
+  background-image: url(/img/orga/luci.jpg)
+  background-position: center
+  background-size: 200%
+
+#seba .foto
+  background-image: url(/img/orga/seba.jpg)
+  background-position: center
+  background-size: 150%
+
+#euge .foto
+  background-image: url(/img/orga/euge.jpg)
+  background-position: 85% 50%
+  background-size: 400%
+
+#maca .foto
+  background-image: url(/img/orga/maca.jpg)
+  background-position: 50% 80%
+  background-size: 200%
+
+#gabi .foto
+  background-image: url(/img/orga/gabi.jpg)
+  background-position: 70% 30%
+  background-size: 160%
+
+#esteban .foto
+  background-image: url(/img/orga/esteban.jpg)
+  background-position: center
+  background-size: 140%
+
+#sofi .foto
+  background-image: url(/img/orga/sofi.jpg)
+  background-position: center
+  background-size: 100%
+
+#vladi .foto
+  background-image: url(/img/orga/vladi.jpg)
+  background-position: center
+  background-size: 260%
+
+
+.integrante
+  margin: 10vw 20vw
+  position: relative
+  h3
+    font-size: 2em
+    padding-left: 2.8em
+  .foto
+      position: absolute
+      top: 0
+      left: 0
+      width: 10vw
+      height: 10vw
+      background-position: center
+      background-size: cover
+      z-index: -1
+      border-radius: 50%
+      transform: translate(-5vw,-3vw)
+      border: 2px solid black
+  p
+    margin-left: 5vw
+  *
+    transition: 0.7s
+
+  &:hover
+    .foto
+      transform: translate(-7vw,-3vw)
+    h3
+      transform: translateY(-1vw)
+    p
+      transform: translateX(1vw)

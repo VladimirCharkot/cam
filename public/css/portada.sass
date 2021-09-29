@@ -1,0 +1,64 @@
+@font-face
+    font-family: Lulo
+    src: url("/fonts/lulo-clean/Lulo Clean One Bold.otf") format("opentype")
+
+
+video
+  position: absolute
+  top: 50%
+  left: 50%
+  -webkit-transform: translateX(-50%) translateY(-50%)
+  transform: translateX(-50%) translateY(-50%)
+  min-width: 100%
+  min-height: 100%
+  width: auto
+  height: auto
+  z-index: -1000
+  overflow: hidden
+
+.portada
+  width: 100vw
+  height: 100vh
+  overflow: hidden
+
+  .telon
+    position: relative
+    width: 100vw
+    height: 100vh
+    background-image: url(/img/trama.webp)
+    z-index: 1
+    overflow: hidden
+
+    .titulo
+      text-shadow: rgba(10, 189, 240, 0.298039) 3px 3px 0px, rgba(254, 1, 1, 0.298039) -3px -3px 0px
+      text-align: center
+      font: 1.5em 'Lulo'
+      color: white
+      width: 50vw
+      position: absolute
+      top: 30vh
+      left: 7vw
+
+    .flechita
+      position: absolute
+      bottom: 5em
+      left: 5em
+      width: 1em
+      height: 1em
+      border-left: 20px solid transparent
+      border-bottom: 20px solid transparent
+      border-right: 20px solid #fff
+      border-top: 20px solid #fff
+      transform: rotate(135deg)
+      background: transparent
+      box-shadow: 4px -4px 3px #acacac
+
+    .logo
+      position: absolute
+      width: 15vw
+      height: 23.2vh
+      background-image: url(/img/logo19.png)
+      background-size: contain
+      background-repeat: no-repeat
+      bottom: 2em
+      right: 3em
