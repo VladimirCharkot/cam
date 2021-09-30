@@ -75,7 +75,7 @@ video {
     .menu a:hover {
       background: #e9ffff; }
 
-@media screen and (max-width: 650px) {
+@media only screen and (max-width: 1050px) {
   .menu a {
     font-size: 2em; } }
 
@@ -122,8 +122,8 @@ video {
 
 #euge .foto {
   background-image: url(/img/orga/euge.jpg);
-  background-position: 85% 50%;
-  background-size: 400%; }
+  background-position: 25% 0%;
+  background-size: 170%; }
 
 #maca .foto {
   background-image: url(/img/orga/maca.jpg);

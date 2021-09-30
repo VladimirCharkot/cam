@@ -4,17 +4,17 @@ extends layout
 block cabecera
   if celu
     .portada
-      .telon(style="background-image: url(/img/logo19.png); background-size: contain; background-position: center; background-repeat: no-repeat;")
+      .telon(style="background-image: url(/img/logo19.png); background-size: contain; background-position: center; background-repeat: no-repeat;  background-color: #ffffffd6; background-blend-mode: color-burn;")
         .titulo
-          h1 Convención Argentina de Malabares
+          h1(style="font-size: 2em; text-align: left; color: black;") Convención Argentina de Malabares
         .flechita
-        .logo
   else
     .portada
       .telon
         .titulo
           h1 Convención Argentina de Malabares
         .flechita
+        .logo
       video(autoplay=true loop=true)
         source(src="/video/portada-2.mp4" type="video/mp4")
 
