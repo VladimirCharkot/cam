@@ -96,7 +96,9 @@ video {
     font-size: 2em; } }
 
 .articulo {
-  padding: 0 10vw; }
+  padding: 0 10vw;
+  display: flex;
+  flex-direction: column; }
   .articulo .cabecera h2 {
     text-align: center;
     font-weight: 400;
@@ -116,7 +118,14 @@ hr {
   display: inline-block; }
 
 .redes {
-  height: 30vh; }
+  height: 30vh;
+  position: relative; }
+  .redes .social {
+    position: absolute;
+    top: 20vh;
+    right: 10vw; }
+  .redes img {
+    width: 5vh; }
 
 .encolumnado {
   display: flex;
