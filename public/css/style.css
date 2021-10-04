@@ -3,6 +3,9 @@
   font-family: Lulo;
   src: url("/fonts/lulo-clean/Lulo Clean One Bold.otf") format("opentype"); }
 
+html {
+  scroll-behavior: smooth; }
+
 video {
   position: absolute;
   top: 50%;
@@ -48,7 +51,14 @@ video {
       border-top: 20px solid #fff;
       transform: rotate(135deg);
       background: transparent;
-      box-shadow: 4px -4px 3px #acacac; }
+      box-shadow: 4px -4px 3px #acacac;
+      animation-duration: 2s;
+      animation-name: flotar;
+      animation-delay: 10s;
+      animation-timing-function: ease-in-out;
+      animation-direction: alternate;
+      animation-iteration-count: 8;
+      cursor: pointer; }
     .portada .telon .logo {
       position: absolute;
       width: 15vw;
@@ -58,6 +68,12 @@ video {
       background-repeat: no-repeat;
       bottom: 2em;
       right: 3em; }
+
+@keyframes flotar {
+  from {
+    transform: translateY(0) rotate(135deg); }
+  to {
+    transform: translateY(5vh) rotate(135deg); } }
 
 .menu {
   background: white;
@@ -92,6 +108,13 @@ video {
     width: 80vw;
     margin: 0 auto; }
 
+hr {
+  margin: 5vw 20vw; }
+
+.reversa {
+  transform: scaleX(-1);
+  display: inline-block; }
+
 .redes {
   height: 30vh; }
 
@@ -104,6 +127,61 @@ video {
     .encolumnado div h3 {
       font-size: 2em;
       margin: 0; }
+
+.galeria {
+  display: flex;
+  flex-direction: row; }
+  .galeria .columna {
+    display: flex;
+    flex-direction: column; }
+  .galeria img {
+    width: calc(70vw/3);
+    cursor: pointer;
+    margin: calc(10vw/6); }
+
+#visualizador {
+  transition: 1s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+  #visualizador.desactivado {
+    opacity: 0;
+    pointer-events: none; }
+  #visualizador.activado {
+    opacity: 1;
+    pointer-events: auto; }
+  #visualizador #cerrar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 1vw 2vw;
+    color: white;
+    font-size: 2em;
+    cursor: pointer; }
+  #visualizador img {
+    max-width: 80vw;
+    max-height: 80vh;
+    border: 10px solid white; }
+  #visualizador #izquierda, #visualizador #derecha {
+    width: 1em;
+    height: 1em;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid #fff;
+    border-top: 20px solid #fff;
+    background: transparent;
+    box-shadow: 4px -4px 3px #acacac;
+    cursor: pointer; }
+  #visualizador #izquierda {
+    transform: rotate(-135deg); }
+  #visualizador #derecha {
+    transform: rotate(45deg); }
 
 #cuete .foto {
   background-image: url(/img/orga/cuete.jpg);
@@ -147,8 +225,8 @@ video {
 
 #vladi .foto {
   background-image: url(/img/orga/vladi.jpg);
-  background-position: center;
-  background-size: 260%; }
+  background-position: 0% 35%;
+  background-size: 240%; }
 
 .integrante {
   margin: 10vw 20vw;

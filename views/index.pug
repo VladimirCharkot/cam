@@ -17,21 +17,42 @@ block cabecera
         .logo
       video(autoplay=true loop=true)
         source(src="/video/portada-2.mp4" type="video/mp4")
+    script.
+      let portada = document.querySelector('.portada')
+      portada.addEventListener('click', () => scroll(0, portada.getClientRects()[0].height))
 
 block contenido
 
   .articulo
     .cabecera
-      h2(style="font-size: 3em") ¡Se viene la cuarta CAM! 
+      h2(style="font-size: 3em") #[span.reversa 🎉] ¡Se viene la cuarta CAM! 🎉
       h2 19 a 24 de abril de 2022, Miramar, Córdoba
     .texto
       p ¡Una vez más el malabar nos encuentra para una semana de talleres, seminarios, shows, amistades, comilonas y circo!
       p La #[em Convención Argentina de Malabares] vuelve con todo, y ya estamos planificando, gestionando y articulando para que sea una fiesta de reencuentro.
-      p El escenario será #[em Miramar de Ansenuza], Córdoba, junto a la laguna Mar Chiquita. Allí estaremos acampando y habitando en el #[em Centro Cultural "La Escuelita"]. La fecha, del #[em 19 al 24 de abril].
+      p El escenario será #[em Miramar de Ansenuza], Córdoba, junto a la laguna Mar Chiquita. Allí estaremos acampando y habitando en el #[em Espacio Cultural "La Escuelita"]. La fecha, del #[em 19 al 24 de abril].
       p Una vez más el foco de conve va a estar puesto sobre la formación. #[b Está abierta la recepción de propuestas de seminaristas]. Si tenés una propuesta, #[a(href="https://forms.gle/Siopo6FwKsaT1oMh7") ¡enviala!]
       p Este año estamos en articulación con el #[a(href="https://colectivoanido.com") Colectivo A-Nido] para la confección del programa de formación. Buscamos organizar líneas de seminarios articuladas por temáticas (técnica/escena/investigación/etc).
       p También estamos en articulación con Circo del Litoral, ocupandose de comunidad, redes y difusión, y Santuanime, en la convocatoria para artistas, organización de espectáculos y técnica. Coordinamos Cuete y Luci, de La Parlota Circo.
       p Iremos informando lo que vaya sucediendo de este lado por nuestras redes y por este mismo sitio.
       p ¡Nos saltotea el corazón de alegría! ¡Vuelve la CAM! ¡Vaaaamooooo!
       p Les esperamos con entusiasmo y abrazos multiplex
-    img(src="/img/funcional.jpg")
+    img(src="/img/artículos/funcional.jpg")
+
+  hr
+
+  .articulo
+    .cabecera
+      h2 El lugar — Miramar de Ansenuza
+    img(src="/img/artículos/atardecer.jpg", style="width: 35vw; float: left; margin: 2em; margin-top: 0;") 
+    .texto
+      p Dejanos contarte un cachín del lugar que vamos a estar habitando.
+      p Miramar se encuentra a unos 197 kilómetros de la ciudad de Córdoba.  Es posible ir por RN 19 hasta pasar Río Primero, luego tomar RP 10 y de allí RP 17. En colectivo, una alternativa es Fonobus.
+      p Es reconocida por ser el único pueblo ribereño a la Laguna Mar Chiquita. Puede verse el atardecer sobre la costa, entre garzas, gaviotas y flamencos rosados. 
+      p Además de playa y costanera, ofrece varios museos y sitios geológicos e históricos.
+      p La Laguna de Mar Chiquita es uno de los humedales salinos más grandes del mundo. Por eso el área cuenta con una biodiversidad única (más de 300 especies de fauna registradas). Como las distancias en la zona son cortas, su costanera es elegida para caminatas y paseos en bici.
+      p Encontrá #[a(href="https://www.cordobaturismo.gov.ar/localidad/miramar-de-ansenuza/") acá] más información sobre la localidad.
+    br
+    img(src="/img/artículos/miramar_1.jpg", style="width: 38vw; float: right; margin: 0 2em;") 
+    .texto
+      p El Espacio Cultural y biblioteca popular "La Escuelita" nos va a estar recibiendo en su extenso parque. 

@@ -7,3 +7,58 @@
     h3
       font-size: 2em
       margin: 0
+
+.galeria
+  display: flex
+  flex-direction: row
+  .columna
+    display: flex
+    flex-direction: column
+  img
+    width: calc(70vw/3)
+    cursor: pointer
+    margin: calc(10vw/6)
+
+#visualizador
+  transition: 1s
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  background: rgba(0,0,0,0.5)
+  display: flex
+  align-items: center
+  justify-content: space-around
+  &.desactivado
+    opacity: 0
+    pointer-events: none
+  &.activado
+    opacity: 1
+    pointer-events: auto
+  #cerrar
+    position: fixed
+    top: 0
+    right: 0
+    margin: 1vw 2vw
+    color: white
+    font-size: 2em
+    cursor: pointer
+  img
+    max-width: 80vw
+    max-height: 80vh
+    border: 10px solid white
+  #izquierda, #derecha
+    width: 1em
+    height: 1em
+    border-left: 20px solid transparent
+    border-bottom: 20px solid transparent
+    border-right: 20px solid #fff
+    border-top: 20px solid #fff
+    background: transparent
+    box-shadow: 4px -4px 3px #acacac
+    cursor: pointer
+  #izquierda
+    transform: rotate(-135deg)
+  #derecha
+    transform: rotate(45deg)
