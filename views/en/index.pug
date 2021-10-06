@@ -1,0 +1,64 @@
+extends ../layout
+
+
+block cabecera
+  if celu
+    .portada
+      .telon(style="background-image: url(/img/logo19.png); background-size: contain; background-position: center; background-repeat: no-repeat;  background-color: #ffffffd6; background-blend-mode: color-burn;")
+        .titulo
+          h1(style="font-size: 2em; text-align: left; color: black;") Argentinian Juggling Convention
+        .flechita
+  else
+    .portada
+      .telon
+        .titulo
+          h1 Argentinian Juggling Convention
+        .flechita
+        .logo
+      video(autoplay=true loop=true)
+        source(src="/video/portada-2.mp4" type="video/mp4")
+    script.
+      let portada = document.querySelector('.portada')
+      portada.addEventListener('click', () => scroll(0, portada.getClientRects()[0].height))
+
+block contenido
+
+  .articulo
+    .cabecera
+      h2(style="font-size: 3em") #[span.reversa 🎉] ¡The fourth CAM is incoming! 🎉
+      h2 April 19th to 24th, 2022, Miramar, Córdoba
+    .texto
+      p ¡Once again juggling gets us together for a week full of workshops, seminars, shows, friends, feasts and circus!
+      p The #[em Argentinian Juggling Convention] comes back reloaded, and we're already planning, arranging and articulating so it's a reunion party.
+      p The scenario will be #[em Miramar de Ansenuza], Córdoba, right next to the Mar Chiquita lagoon. There we'll be hosted by the #[em "La Escuelita" Cultural Space]. The date, #[em April 19th to 24th].
+      p Once again the convention's focus will be on education. #[b Seminar applications are open]. If you've got a proposal, #[a(href="https://forms.gle/Siopo6FwKsaT1oMh7") ¡let us know!]
+      p This year we'll be working with the #[a(href="https://colectivoanido.com") A-Nido Colective] for the making of the educational program. We look forward to organize themed lines for the seminars (technique, research, scene, etc...)
+      p We're also articulating with Litoral Circus, who are going to take care of community, networking and broadcasting, and Santuanime, who will manage show applications and organization. We're Cuete and Luci, from La Parlota Circus, in the general organization.
+      p We'll let you know what's up on this side by means of our social media and this very site. 
+      p ¡Our hearts are seething in joy! ¡The #[em Conve] is back! ¡Wooooo! 
+      p We'll be waiting with zest
+    img(src="/img/artículos/funcional.jpg")
+
+  hr
+
+  .articulo
+    .cabecera
+      h2 The place — La Escuelita
+    div
+      img(src="/img/artículos/la_escuelita.png", style="width: 38vw; float: right; margin: 0 2em;") 
+      .texto
+        p The Cultural Space and Pop Library "La Escuelita", who will be our host, is formed by a group of neighbours who from 2015 onward get together to carry out cultural activities in a building granted by the ministry of education. 
+        p It hosts a big amount of artistic and educative activities in which the Miramar's and neighbouring towns' communities participate. In 2016 the town's library joins the project and from then on build together what it is today a true cultural concentration core. Not only projects are propeled from the space itself but also deportive groups and even the municipality find room in this nest to enhance their projects and take in the human warmth that this wondrous group of people emanates.   
+        p It takes part in the alive cultural community network in the eastern Provincia de Córdoba, it is a culture point in the nation's culture ministry and hosts #[a(href="http://otrosnosotrosradio.com.ar/") the radio "otros nosotros"] ("another us", roughly) with daily schedule. 
+        p The Escuelita is perpetual call to the cultural labor. 
+    br
+    .cabecera
+      h2 The territory  — Miramar de Ansenuza
+    div
+      img(src="/img/artículos/miramar_1.jpg", style="width: 35vw; float: left; margin: 2em; margin-top: 0;") 
+      .texto
+        p Miramar is located some 197 kilometers north of the City of Córdoba. It is possible to take the NR 19 just passing Río Primero, then take the PR 10 and finally PR 17. One can also take the "Fonobus". 
+        p It is avowed to be the only riverside town in the banks of Mar Chiquita Lagoon. The sun falls on the shore between herons, seagulls and pink flamingos. 
+        p Besides beach and waterfront, it offers several museums and geological and historical sites. 
+        p The Mar Chiquita Lagoon is one of the biggest saline wetlands in the world. Thus, the area encompasses a unique biodiversity (more than 300 wildlife species accounted for). As the distances are small, its waterfront is chosen for strolls and biking. 
+        p Find out more about the locality #[a(href="https://www.cordobaturismo.gov.ar/localidad/miramar-de-ansenuza/") here].

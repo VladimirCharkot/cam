@@ -1,0 +1,64 @@
+extends ../layout
+
+
+block cabecera
+  if celu
+    .portada
+      .telon(style="background-image: url(/img/logo19.png); background-size: contain; background-position: center; background-repeat: no-repeat;  background-color: #ffffffd6; background-blend-mode: color-burn;")
+        .titulo
+          h1(style="font-size: 2em; text-align: left; color: black;") Convention Argentine de Jonglerie
+        .flechita
+  else
+    .portada
+      .telon
+        .titulo
+          h1 Convention Argentine de Jonglerie
+        .flechita
+        .logo
+      video(autoplay=true loop=true)
+        source(src="/video/portada-2.mp4" type="video/mp4")
+    script.
+      let portada = document.querySelector('.portada')
+      portada.addEventListener('click', () => scroll(0, portada.getClientRects()[0].height))
+
+block contenido
+
+  .articulo
+    .cabecera
+      h2(style="font-size: 3em") #[span.reversa 🎉] ¡Le quatrième CAM est entrant! 🎉
+      h2 19 au 24 avril, 2022, Miramar, Córdoba
+    .texto
+      p ¡Une fois de plus la jonglerie nous donne rendez-vous pour un semaine riche en ateliers, séminaires, spectacles, amis, banquets et cirque!
+      p La #[em Convention Argentine de Jonglerie (CAM)] revient rechargée, et nous sommes déjà en train de planifier, d'organiser et d'articuler pour que ce soit une fête de retrouvailles.
+      p Le scénario sera #[em Miramar de Ansenuza], Córdoba, juste à côté de la lagune de Mar Chiquita. Là, nous serons hébergés par l'espace culturel #[em "La Escuelita"]. La date, #[em du 19 au 24 avril].
+      p Une fois de plus, le congrès se concentrera sur l'éducation. #[b Les candidatures pour les séminaires sont ouvertes]. Si vous avez une proposition, #[a(href="https://forms.gle/Siopo6FwKsaT1oMh7") faites-le nous savoir!]
+      p Cette année, nous travaillerons avec le #[a(href="https://colectivoanido.com") Collectif A-Nido] pour la réalisation du programme éducatif. Nous nous réjouissons d'organiser des lignes thématiques pour les séminaires (technique, recherche, scène, etc...)
+      p On s'articule aussi avec Litoral Circus, qui va s'occuper de la communauté, du réseautage et de la diffusion, et Santuanime, qui va gérer les candidatures et l'organisation des spectacles. Nous sommes Cuete et Luci, de La Parlota Circus, dans l'organisation générale.
+      p Nous vous ferons savoir ce qui se passe de ce côté au moyen de nos médias sociaux et de ce site même.
+      p Nos cœurs bouillonnent de joie! Le #[em Conve] est de retour!! Wooooo!
+      p On vous attend avec entrain!
+    img(src="/img/artículos/funcional.jpg")
+
+  hr
+
+  .articulo
+    .cabecera
+      h2 Le lieu — La Escuelita
+    div
+      img(src="/img/artículos/la_escuelita.png", style="width: 38vw; float: right; margin: 0 2em;") 
+      .texto
+        p L'Espace Culturel et la Bibliothèque Pop "La Escuelita", qui sera notre hôte, est formé par un groupe de voisins qui, à partir de 2015, se réunissent pour réaliser des activités culturelles dans un bâtiment accordé par le ministère de l'Éducation.
+        p Il accueille un grand nombre d'activités artistiques et éducatives auxquelles participent les communautés de Miramar et des villes voisines. En 2016, la bibliothèque de la ville rejoint le projet et dès lors ils construisent ensemble ce qui est aujourd'hui un véritable noyau de concentration culturelle. Non seulement les projets sont propulsés à partir de l'espace lui-même mais aussi les groupes déportés et même la municipalité trouvent de la place dans ce nid pour valoriser leurs projets et s'imprégner de la chaleur humaine que dégage ce merveilleux groupe de personnes.   
+        p Il fait partie du réseau communautaire culturel vivant de la province orientale de Córdoba, c'est un point culturel du ministère de la Culture de la nation et héberge #[a(href="http://otrosnosotrosradio.com.ar/") la radio " otros nosotros"] ("un autre nous", à peu près) avec un horaire quotidien.
+        p L'Escuelita est un appel perpétuel au travail culturel.
+    br
+    .cabecera
+      h2 Le territoire — Miramar de Ansenuza
+    div
+      img(src="/img/artículos/miramar_1.jpg", style="width: 35vw; float: left; margin: 2em; margin-top: 0;") 
+      .texto
+        p Miramar est situé à environ 197 kilomètres au nord de la ville de Córdoba. Il est possible de prendre la RN 19 juste en passant par Río Primero, puis de prendre la RP 10 et enfin la RP 17. On peut aussi prendre le "Fonobus".
+        p Il est reconnu qu'il s'agit de la seule ville riveraine des rives de la lagune de Mar Chiquita. Le soleil tombe sur le rivage entre hérons, mouettes et flamants roses.
+        p Outre la plage et le front de mer, elle offre plusieurs musées et sites géologiques et historiques.
+        p La lagune de Mar Chiquita est l'une des plus grandes zones humides salines du monde. Ainsi, le territoire abrite une biodiversité unique (plus de 300 espèces fauniques recensées). Les distances étant réduites, son front de mer est choisi pour les promenades et le vélo.
+        p En savoir plus sur la localité #[a(href="https://www.cordobaturismo.gov.ar/localidad/miramar-de-ansenuza/") ici].

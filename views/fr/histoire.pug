@@ -1,0 +1,75 @@
+extends ../layout
+
+block contenido
+  .articulo
+    .cabecera
+      h2 Éditions passées
+    .encolumnado
+      iframe(width="560" height="315" src="https://www.youtube.com/embed/40Wbd_oWD6M" title="CAM16" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      div
+        h3 2016 - Río Cuarto
+        p En 2016, le premier CAM a eu lieu, avec un fort engagement en faveur de l'éducation et de la formation. Il a été organisé à l'Université Nationale de Rio Cuarto (UNRC) avec un concours de 130 participants, 15 professeurs, 4 nuits de spectacles et 100 heures de formation artistique. Nous avons eu la visite de participants de 15 provinces argentines. Cela a marqué un précédent dans la population de jongleurs qui n'avait jamais vécu un événement comme celui-ci.
+    .encolumnado
+      div
+        h3 2017 - Río Cuarto
+        p Dans cette édition, nous avons gardé le même emplacement et nous avons réussi à doubler le nombre de participants, atteignant 250 personnes. Plus de 20 enseignants inscrits. Nous avons gardé les 100 heures de formation. Deux compagnies ont participé avec leurs spectacles. En plus de recevoir des congressistes de notre pays, nous avons obtenu l'assentiment de personnes de 6 pays d'Amérique latine et de 5 pays du continent européen. Grâce à l'impact et à la gestion de notre premier événement, nous avons reçu des dons de fabricants d'outils nationaux et internationaux.
+      iframe(width="560" height="315" src="https://www.youtube.com/embed/Rl8Hu-ELxq0" title="CAM17" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      
+    .encolumnado
+      iframe(width="560" height="315" src="https://www.youtube.com/embed/WNRHdNiYZ4U" title="CAM19" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      div
+        h3 2019 - San Francisco
+        p Cette dernière édition a été accueillie par la ville de San Francisco, plus précisément le San Francisco Cultural Center. Un format très différent des précédents a été proposé. Nous avons décidé d'adresser l'événement à un public en quête d'approfondissement de nouvelles formes et procédés liés à la jonglerie. Nous avons réduit la participation à un maximum de 25 participants pour expérimenter un format plus proche d'une retraite. Nous avons réuni 10 séminaristes, 20 artistes et un horaire pédagogique de 70 heures. Des conférenciers et des artistes de premier plan d'Argentine et des pays voisins y ont participé. Nous avons réussi à maintenir des liens étroits dans d'autres conventions et l'attention des producteurs qui misent toujours sur le projet.
+
+  script(src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js")
+  .articulo
+    .cabecera
+      h2 Fotos
+    .galeria
+      each lista in galeria
+        .columna
+          each n in lista
+            img(data-src=n+1, src=`/img/galería/${n+1}.webp`, onclick="mostrar(this)")
+
+  #visualizador.desactivado
+    #izquierda(onclick="anterior()")
+    #cerrar(onclick="cerrar()") X
+    img
+    #derecha(onclick="proxima()")
+    
+  script.
+    let visualizador = document.querySelector('#visualizador')
+    let imagen = document.querySelector('#visualizador img')
+    
+    let cerrar = () => {
+      visualizador.className = 'desactivado'
+    }
+    let mostrar = (e) => {
+      let imgsrc = 
+      visualizador.className = "activado"
+      imagen.setAttribute('src', e.getAttribute("src"))
+      imagen.setAttribute('data-src', e.getAttribute("data-src"))
+    }
+    let proxima = () => {
+      let actual = parseInt(imagen.getAttribute("data-src"))
+      let prox = actual < 72 ? actual + 1 : actual
+      imagen.setAttribute('data-src', prox)
+      imagen.setAttribute('src', `/img/galería/${prox}.jpg`)
+    }
+    let anterior = () => {
+      let actual = parseInt(imagen.getAttribute("data-src"))
+      let prox = actual > 1 ? actual - 1 : actual 
+      imagen.setAttribute('data-src', prox)
+      imagen.setAttribute('src', `/img/galería/${prox}.jpg`)
+    }
+    document.querySelector('body').addEventListener('keydown', k => {
+      if(k.key == "ArrowLeft"){
+        anterior()
+      }
+      if(k.key == "ArrowRight"){
+        proxima()
+      }
+      if(k.key == "Escape"){
+        cerrar()
+      }
+    })
