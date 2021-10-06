@@ -2,29 +2,35 @@ extends layout
 
 block contenido
   .articulo
-    .cabecera
+    if lang == "es"
       h2 Ediciones pasadas
+    if lang == "en"
+      h2 Past editions
+    if lang == "fr"
+      h2 Éditions passées
+    if lang == "pt"
+      h2 Edições anteriores
     .encolumnado
-      iframe(width="560" height="315" src="https://www.youtube.com/embed/40Wbd_oWD6M" title="CAM16" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-      div
-        h3 2016 - Río Cuarto
-        p En 2016 ocurrió la primera CAM, con una fuerte apuesta a la formación y capacitación. Se organizó en la UNRC “Universidad Nacional de Rio Cuarto” con una concurrencia de 130 asistentes, 15 docentes, 4 noches de espectáculos y 100 horas de formación artística. Tuvimos la visita de participantes provenientes de 15 provincias Argentinas. Marcó un precedente en la población de malabaristas que nunca había vivido un evento semejante a este.
+      iframe(width="560" height="315" src="https://www.youtube.com/embed/40Wbd_oWD6M" title="CAM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      div!=textos[0]
     .encolumnado
-      div
-        h3 2017 - Río Cuarto
-        p En esta edición mantuvimos la misma locación y logramos duplicar la cantidad de asistentes llegando a las 250 personas. Se inscribieron más de 20 docentes. Mantuvimos las 100 horas de capacitación. Participaron dos compañías con sus espectáculos. Ademas de recibir a convencionistas de nuestro país logramos la concurrencia de personas provenientes de 6 países Latinoamericanos y 5 países del continente europeo. Gracias a la repercusión y gestión de nuestro primer evento, recibimos donaciones de fabricantes de implementos nacionales e internacionales.
-      iframe(width="560" height="315" src="https://www.youtube.com/embed/Rl8Hu-ELxq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      div!=textos[1]
+      iframe(width="560" height="315" src="https://www.youtube.com/embed/Rl8Hu-ELxq0" title="CAM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
       
     .encolumnado
-      iframe(width="560" height="315" src="https://www.youtube.com/embed/WNRHdNiYZ4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-      div
-        h3 2019 - San Francisco
-        p Esta última edición tuvo como anfitrión la ciudad de San Francisco, más precisamente el Centro Cultural San Francisco. Se propuso un formato muy distinto a las anteriores. Decidimos puntualizar el evento a un publico en busca de profundizar nuevas formas y procesos relacionados con el malabarismo. Redujimos la concurrencia a un tope 25 participantes para experimentar con un formato mas parecido a un retiro. Convocamos a 10 seminaristas, 20 artistas y una carga horario pedagógica de 70 horas. Participaron docentes y artistas referentes de Argentina y países limítrofes. Logramos mantener los lazos estrechos en otras convenciones y la atención de productores que aun siguen apostando al proyecto.
+      iframe(width="560" height="315" src="https://www.youtube.com/embed/WNRHdNiYZ4U" title="CAM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      div!=textos[2]
 
   script(src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js")
   .articulo
-    .cabecera
+    if lang == "es"
       h2 Fotos
+    if lang == "en"
+      h2 Photos
+    if lang == "fr"
+      h2 Des photos
+    if lang == "pt"
+      h2 As fotos
     .galeria
       each lista in galeria
         .columna
@@ -54,13 +60,13 @@ block contenido
       let actual = parseInt(imagen.getAttribute("data-src"))
       let prox = actual < 72 ? actual + 1 : actual
       imagen.setAttribute('data-src', prox)
-      imagen.setAttribute('src', `/img/galería/${prox}.jpg`)
+      imagen.setAttribute('src', `/img/galería/${prox}.webp`)
     }
     let anterior = () => {
       let actual = parseInt(imagen.getAttribute("data-src"))
       let prox = actual > 1 ? actual - 1 : actual 
       imagen.setAttribute('data-src', prox)
-      imagen.setAttribute('src', `/img/galería/${prox}.jpg`)
+      imagen.setAttribute('src', `/img/galería/${prox}.webp`)
     }
     document.querySelector('body').addEventListener('keydown', k => {
       if(k.key == "ArrowLeft"){

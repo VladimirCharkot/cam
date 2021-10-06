@@ -18,12 +18,12 @@ video
   z-index: -1000
   overflow: hidden
 
-.portada
+#portada
   width: 100vw
   height: 100vh
   overflow: hidden
 
-  .telon
+  #telon
     position: relative
     width: 100vw
     height: 100vh
@@ -31,17 +31,25 @@ video
     z-index: 1
     overflow: hidden
 
-    .titulo
-      text-shadow: rgba(10, 189, 240, 0.298039) 3px 3px 0px, rgba(254, 1, 1, 0.298039) -3px -3px 0px
-      text-align: center
+    .lang
+      position: absolute
+      top: 2vh
+      right: 2vw
+      img
+        width: 2vw
+        margin: 1vw
+
+    #titulo
+      text-shadow: rgba(10, 189, 240, 0.3) 3px 3px 0px, rgba(254, 1, 1, 0.3) -3px -3px 0px, rgba(240, 200, 0, 0.3) 3px -3px 0px
+      text-align: left
       font: 1.5em 'Lulo'
       color: white
       width: 50vw
       position: absolute
-      top: 30vh
-      left: 7vw
+      top: 10vh
+      left: 5vw
 
-    .flechita
+    #flechita
       position: absolute
       bottom: 5em
       left: 5em
@@ -64,7 +72,7 @@ video
 
       cursor: pointer
 
-    .logo
+    #logo
       position: absolute
       width: 15vw
       height: 23.2vh

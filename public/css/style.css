@@ -19,27 +19,34 @@ video {
   z-index: -1000;
   overflow: hidden; }
 
-.portada {
+#portada {
   width: 100vw;
   height: 100vh;
   overflow: hidden; }
-  .portada .telon {
+  #portada #telon {
     position: relative;
     width: 100vw;
     height: 100vh;
     background-image: url(/img/trama.webp);
     z-index: 1;
     overflow: hidden; }
-    .portada .telon .titulo {
-      text-shadow: rgba(10, 189, 240, 0.298039) 3px 3px 0px, rgba(254, 1, 1, 0.298039) -3px -3px 0px;
-      text-align: center;
+    #portada #telon .lang {
+      position: absolute;
+      top: 2vh;
+      right: 2vw; }
+      #portada #telon .lang img {
+        width: 2vw;
+        margin: 1vw; }
+    #portada #telon #titulo {
+      text-shadow: rgba(10, 189, 240, 0.3) 3px 3px 0px, rgba(254, 1, 1, 0.3) -3px -3px 0px, rgba(240, 200, 0, 0.3) 3px -3px 0px;
+      text-align: left;
       font: 1.5em 'Lulo';
       color: white;
       width: 50vw;
       position: absolute;
-      top: 30vh;
-      left: 7vw; }
-    .portada .telon .flechita {
+      top: 10vh;
+      left: 5vw; }
+    #portada #telon #flechita {
       position: absolute;
       bottom: 5em;
       left: 5em;
@@ -59,7 +66,7 @@ video {
       animation-direction: alternate;
       animation-iteration-count: 8;
       cursor: pointer; }
-    .portada .telon .logo {
+    #portada #telon #logo {
       position: absolute;
       width: 15vw;
       height: 23.2vh;
@@ -96,14 +103,12 @@ video {
     font-size: 2em; } }
 
 .articulo {
-  padding: 0 10vw;
-  display: flex;
-  flex-direction: column; }
-  .articulo .cabecera h2 {
+  padding: 0 10vw; }
+  .articulo h2 {
     text-align: center;
     font-weight: 400;
     font-size: 2em; }
-  .articulo .texto {
+  .articulo p {
     padding: 0 2em;
     text-align: justify; }
   .articulo img {
@@ -112,6 +117,20 @@ video {
 
 hr {
   margin: 5vw 20vw; }
+
+#cam22 h2:first-of-type {
+  font-size: 3em; }
+
+#escuelita img {
+  width: 38vw;
+  float: right;
+  margin: 0 2em; }
+
+#miramar img {
+  width: 35vw;
+  float: left;
+  margin: 2em;
+  margin-top: 0; }
 
 .reversa {
   transform: scaleX(-1);

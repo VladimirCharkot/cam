@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title= title
+    title=titulo
     link(rel='stylesheet', href='/css/style.css')
     link(rel='icon', href='/img/logo19.png')
     meta(property="og:title" content="CAM22")
@@ -14,40 +14,23 @@ html
     block cabecera
     
     block menu
-      if lang
-        if lang == "en"
-          .menu
-            a(href="/en/") CAM22
-            a(href="/en/history") History
-            a(href="/en/orga") Organization
-        else 
-          if lang == "fr"
-            .menu
-              a(href="/fr/") CAM22
-              a(href="/fr/histoire") Histoire
-              a(href="/fr/orga") Organisation
-      else
-        .menu
-          a(href="/") CAM22
-          a(href="/historia") Historia
-          a(href="/orga") Organización
+      include menu
           
     block contenido
     
     block pie
       .redes
-        
         .lang
-          a(href="/")
+          a(href="/" title="Castellano")
             img(src="/img/icon/arg.png" alt="Sitio en castellano")
             
-          a(href="/en/")
+          a(href="/en/" title="English")
             img(src="/img/icon/eng.png" alt="English Site")
             
-          a(href="#" title="Estamos trabalhando para você")
+          a(href="/pt/" title="Estamos trabalhando para você")
             img(src="/img/icon/bra.png" alt="Site em portugues")
             
-          a(href="/fr/")
+          a(href="/fr/" title="Français")
             img(src="/img/icon/fra.png" alt="Site en français")
       
         .social

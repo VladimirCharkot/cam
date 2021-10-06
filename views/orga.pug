@@ -2,52 +2,127 @@ extends layout
 
 block contenido
   .articulo
-    .cabecera
+    if lang == "es"
       h2 Equipo de organización de la CAM
+    if lang == "en"
+      h2 The AJC's organization team
+    if lang == "fr"
+      h2 Équipe d'organisation du CAJ
+    if lang == "pt"
+      h2 Equipe organizadora CAM
       
     .integrante#cuete
       .foto
       h3 Gonzalo "Cuete" Borgogno
-      p Integra "La Parlota Circo" desde 2005. Fue embajador de la Fundación Viktor Kee. Organizó festivales y eventos educativos desde 2007 en Argentina y Chile. Es coordinador gral. de la Convención Latinoamericana de rueda cyr. Dirige y gestiona el festival de circo San francirco.
+      if lang == "es"
+        p Integra "La Parlota Circo" desde 2005. Fue embajador de la Fundación Viktor Kee. Organizó festivales y eventos educativos desde 2007 en Argentina y Chile. Es coordinador gral. de la Convención Latinoamericana de rueda cyr. Dirige y gestiona el festival de circo San francirco.
+      if lang == "en"
+        p He's a member of "La Parlota Circo" since 2005. He was an ambassador for the Viktor Kee Foundation. Has organized festivals and educational events since 2007 in Argentina and Chile. He's coordinator of the Latin American Convention of cyr wheel. Directs and manages the San francirco circus festival.
+      if lang == "fr"
+        p Il est membre de "La Parlota Circo" depuis 2005. Il a été ambassadeur de la Fondation Viktor Kee. A organisé des festivals et des événements éducatifs depuis 2007 en Argentine et au Chili. Il est coordinateur de la Convention latino-américaine de la roue cyr. Dirige et gère le festival de cirque de San francirco.
+      if lang == "pt"
+        p É membro do "La Parlota Circo" desde 2005. Foi embaixador da Fundação Viktor Kee. Organiza festivais e eventos educacionais desde 2007 na Argentina e no Chile. É coordenador da Convenção Latino-Americana de Roda de Cir. Dirige e administra o festival de circo de San francirco.
       
     .integrante#luci
       .foto
       h3 Luciana Balangione
-      p Se dedica desde 2005 a dictar clases de canto y expresión escénica de manera particular y en instituciones. Ha sido  preparadora vocal y directora de grupos corales. Integra "La Parlota Circo". Es colaboradora y organizadora de CAM. Se desempeña como gestora/productora de Sala Piaf.
+      if lang == "es"
+        p Se dedica desde 2005 a dictar clases de canto y expresión escénica de manera particular y en instituciones. Ha sido  preparadora vocal y directora de grupos corales. Integra "La Parlota Circo". Es colaboradora y organizadora de CAM. Se desempeña como gestora/productora de Sala Piaf.
+      if lang == "en"
+        p Since 2005, she has been teaching singing and performing arts classes in private and institutional settings. She has been a vocal coach and director of choral groups. She integrates "La Parlota Circo". She is a collaborator and organizer of CAM. Works as manager/producer for Piaf Hall.
+      if lang == "fr"
+        p Depuis 2005, elle enseigne le chant et les arts de la scène en milieu privé et institutionnel. Elle a été coach vocal et directrice de groupes choraux. Elle intègre "La Parlota Circo". Elle est collaboratrice et organisatrice du CAM. Travaille en tant que manager/producteur pour Piaf Hall.
+      if lang == "pt"
+        p Desde 2005, ela dá aulas de canto e artes cênicas em ambientes privados e institucionais. Ela já foi treinadora vocal e diretora de grupos corais. Integra o "La Parlota Circo". É colaboradora e organizadora do CAM. Trabalha como gerente / produtor para Piaf Hall.
+      
       
     .integrante#seba
       .foto
       h3 Sebastián Rojo
-      p En docencia y en escena, investiga teórica y vivencialmente, elementos involucrados en la creatividad y la improvisación: atención, movimiento genuino, presencia.. Desde allí asesora, dirige, produce, escribe y trasmite sus ideas. Cia Santuanimé. Colectivo A-Nido. El Silencio Donde Escucho.
+      if lang == "es"
+        p En docencia y en escena, investiga teórica y vivencialmente, elementos involucrados en la creatividad y la improvisación: atención, movimiento genuino, presencia.. Desde allí asesora, dirige, produce, escribe y trasmite sus ideas. Cia Santuanimé. Colectivo A-Nido. El Silencio Donde Escucho.
+      if lang == "en"
+        p In teaching and on stage he investigates, theoretically and experientially, elements involved in creativity and improvisation: attention, genuine movement, presence. From there he advises, directs, produces, writes and transmits his ideas. Santuanimé Company. A-Nido Collective. The Silence Where I Listen (El Silencio Donde Escucho).
+      if lang == "fr"
+        p Dans l'enseignement et sur scène, il explore, théoriquement et expérimentalement, les éléments impliqués dans la créativité et l'improvisation: attention, mouvement authentique, présence. De là, il conseille, dirige, produit, écrit et transmet ses idées. Compagnie Santuanime. Collectif A-Nido. Le silence où j'écoute (El Silencio Donde Escucho).
+      if lang == "pt"
+        p No ensino e no palco investiga, teórica e experiencialmente, elementos envolvidos na criatividade e improvisação: atenção, movimento genuíno, presença. A partir daí, ele aconselha, dirige, produz, escreve e transmite suas idéias. Companhia Santuanimé. Coletivo A-Nido. O silêncio onde eu escuto (El Silencio Donde Escucho).
+      
         
     .integrante#euge
       .foto
       h3 María Eugenia Peirone
-      p Prof. y Lic. en Cs. de la Educación (UNC). Trabaja en Formación Docente. Ex Coordinadora Académica de Lic. en Artes Circenses Contemporáneas, Cirko de Mente, México. Integra Colectivo A – Nido, un proyecto de investigación educativa en Circo en Argentina.
+      if lang == "es"
+        p Prof. y Lic. en Cs. de la Educación (UNC). Trabaja en Formación Docente. Ex Coordinadora Académica de Lic. en Artes Circenses Contemporáneas, Cirko de Mente, México. Integra Colectivo A – Nido, un proyecto de investigación educativa en Circo en Argentina.
+      if lang == "en"
+        p Professor and Bachelor of Education Sciences (UNC). She works in Teacher Training. Former Academic Coordinator of the Bachelorate In Contemporary Circus Arts, Cirko de Mente, Mexico. She is a member of A-Nido Collective, an educational circus research project in Argentina.
+      if lang == "fr"
+        p Professeur et bachelier en sciences de l'éducation (UNC). Elle travaille dans la formation des enseignants. Ancien coordinateur académique du baccalauréat en arts du cirque contemporains, Cirko de Mente, Mexique. Elle est membre du collectif A-Nido, un projet de recherche pédagogique sur l'enseignement du cirque en Argentine.
+      if lang == "pt"
+        p Professor e bacharel em Ciências da Educação (UNC). Ela trabalha na Formação de Professores. Ex-Coordenador Acadêmico do Bacharelado em Arte Circo Contemporânea, Cirko de Mente, México. Ela é membro do Coletivo A-Nido, um projeto educacional de pesquisa circense na Argentina.
+      
         
     .integrante#maca
       .foto
       h3 Javier Ernesto Goffré
-      p Lic. en Cine y TV UNC. Se dedica al Circo y el Teatro de Objetos. Forma parte de la Cía. Santuanimé con la que ha realizado varios espectáculos desde el año 2004. Forma parte la Fundación por el Teatro, la Chacarita Teatro y es técnico de escena de la CAM desde su primer edición.
+      if lang == "es"
+        p Lic. en Cine y TV UNC. Se dedica al Circo y el Teatro de Objetos. Forma parte de la Cía. Santuanimé con la que ha realizado varios espectáculos desde el año 2004. Forma parte la Fundación por el Teatro, la Chacarita Teatro y es técnico de escena de la CAM desde su primer edición.
+      if lang == "en"
+        p Bachelor in Film and TV (UNC). He is dedicated to the circus and the theater of objects. He is part of the Santuanimé Company with whom he has performed several shows since 2004. He is part of the Fundación por el Teatro, the Chacarita Teatro and has been a stage technician at CAM since its first edition.
+      if lang == "fr"
+        p Baccalauréat en cinéma et télévision (UNC). Il se consacre au cirque et au théâtre d'objets. Il fait partie de la Cie Santuanimé avec laquelle il a donné plusieurs spectacles depuis 2004. Il fait partie de la Fundación por el Teatro, du Chacarita Teatro et est technicien de scène au CAM depuis sa première édition.
+      if lang == "pt"
+        p Bacharel em Cinema e TV (UNC). Ele se dedica ao circo e ao teatro de objetos. Faz parte da Companhia Santuanimé com a qual já apresentou vários espetáculos desde 2004. Faz parte da Fundación por el Teatro, do Chacarita Teatro e é técnico de palco do CAM desde a sua primeira edição.
+      
         
     .integrante#gabi
       .foto
       h3 Gabriela Rojo
-      p Malabarista, maga y titiritera. Comienza en el Circo año 2002. Integra la Cía Santuanimé (2004) y Cía Sin Pestañear (2019). Forma parte del  Círculo Mágico de Córdoba (2004) y de APTCC (2020). Ha participado en la organización de Encuentros,  Festivales (Circo en Escena 2007 al 2013), Congresos, etc.
+      if lang == "es"
+        p Malabarista, maga y titiritera. Comienza en el Circo año 2002. Integra la Cía Santuanimé (2004) y Cía Sin Pestañear (2019). Forma parte del  Círculo Mágico de Córdoba (2004) y de APTCC (2020). Ha participado en la organización de Encuentros,  Festivales (Circo en Escena 2007 al 2013), Congresos, etc.
+      if lang == "en"
+        p Juggler, magician and puppeteer. She starts doing circus in 2002. She is a member of the Santuanimé Company (2004) and Cía Sin Pestañear (2019). She is part of the Magic Circle of Córdoba (2004) and APTCC (2020). She has participated in the organization of meetings, festivals (Circus on Stage 2007 to 2013), Congresses, etc.
+      if lang == "fr"
+        p Jongleur, magicien et marionnettiste. Elle commence à faire du cirque en 2002. Elle est membre de la Cie Santuanimé (2004) et de Cie Sin Pestañear (2019). Elle fait partie du Cercle Magique de Cordoue (2004) et APTCC (2020). Elle a participé à l'organisation de rencontres, festivals (Circus on Stage 2007 à 2013), Congrès, etc.
+      if lang == "pt"
+        p Malabarista, mágica e titereira. Começou a fazer circo em 2002. É sócia da Companhia Santuanimé (2004) e Cía Sin Pestañear (2019). Faz parte do Círculo Mágico de Córdoba (2004) e APTCC (2020). Tem participado na organização de reuniões, festivais (Circo em Palco 2007 a 2013), Congressos, etc.
+      
         
     .integrante#esteban
       .foto
       h3 Esteban Sosa
-      p Presidente y fundador de la cooperativa de trabajo Circo Del Litoral. Artista y director de espectáculos de circo-teatro. Gestor y productor artístico en Santa Fe y zona de influencia. Community manager de CAM. Revisor de cuenta en Asoc. civil Siambretta circo.
+      if lang == "es"
+        p Presidente y fundador de la cooperativa de trabajo Circo Del Litoral. Artista y director de espectáculos de circo-teatro. Gestor y productor artístico en Santa Fe y zona de influencia. Community manager de CAM. Revisor de cuenta en Asoc. civil Siambretta circo.
+      if lang == "en"
+        p President and founder of the work cooperative Circo Del Litoral. Artist and director of circus-theater shows. Manager and artistic producer in Santa Fe and its area of influence. CAM community manager. Account reviewer at Siambretta circus civil association.
+      if lang == "fr"
+        p Président et fondateur de la coopérative de travail Circo Del Litoral. Artiste et metteur en scène de spectacles de cirque-théâtre. Gérant et producteur artistique à Santa Fe et sa zone d'influence. Gestionnaire de communauté CAM. Réviseur de compte à l'association civile du cirque Siambretta.
+      if lang == "pt"
+        p Presidente e fundador da cooperativa de trabalho Circo Del Litoral. Artista e diretor de espetáculos de teatro-circo. Gerente e produtor artístico em Santa Fé e sua área de influência. Gerente da comunidade CAM. Revisor de contas na associação civil do circo Siambretta.
         
     .integrante#sofi
       .foto
       h3 Sofía Molinari
-      p Desde 2013 formándose como acróbata y artista escénica. Ha sido formadora en técnicas de acrobacias aéreas. Es coordinadora y gestora del Festival de circo “San Francirco”. Asistente contable y secretaria ejecutiva de la CAM. Voluntaria de la convención de latinoamericana de rueda CYR.
+      if lang == "es"
+        p Desde 2013 formándose como acróbata y artista escénica. Ha sido formadora en técnicas de acrobacias aéreas. Es coordinadora y gestora del Festival de circo “San Francirco”. Asistente contable y secretaria ejecutiva de la CAM. Voluntaria de la convención de latinoamericana de rueda CYR.
+      if lang == "en"
+        p Since 2013 training as an acrobat and performing artist. She has been a trainer in aerobatics techniques. She is coordinator and manager in the “San Francirco” Circus Festival. She is an accounting assistant and executive secretary of the CAM. She volunteers for the cyr wheel latin american convention.
+      if lang == "fr"
+        p Depuis 2013 formation d'acrobate et d'artiste du spectacle. Elle a été formatrice en techniques de voltige. Elle est coordinatrice et gérante du Festival du Cirque « San Francirco ». Elle est assistante comptable et secrétaire de direction du CAM. Elle est bénévole pour la convention latino-américaine de la roue cyr.
+      if lang == "pt"
+        p Desde 2013 formando-se como acrobata e artista performativa. Ela foi treinadora em técnicas de acrobacias. É coordenadora e administradora do Festival de Circo “San Francirco”. É assistente contábil e secretária executiva do CAM. Ela é voluntária para a convenção latino-americana da roda de cyr.
         
     .integrante#vladi
       .foto
       h3 Vladimir Charkot
-      p Se formó con Sebastián Rojo. Profundizó en el estudio del malabar, la improvisación, los lenguajes, la cognición, la conducta, historia, artes y ciencias humanas y los sistemas en general. Es profesor de programación. Conduce talleres de malabar con clavas. Integra Colectivo A-Nido. Oficia de técnico informático en la CAM.
+      if lang == "es"
+        p Se formó con Sebastián Rojo. Profundizó en el estudio del malabar, la improvisación, los lenguajes, la cognición, la conducta, historia, artes y ciencias humanas y los sistemas en general. Es profesor de programación. Conduce talleres de malabar con clavas. Integra Colectivo A-Nido. Oficia de técnico informático en la CAM.
+      if lang == "en"
+        p He studied with Sebastián Rojo. Delved into the study of juggling, improvisation, languages, cognition, behavior, history, arts and human sciences, and systems in general. Teaches programming and conducts club juggling workshops. Member of the A-Nido Collective. Performs as computer technician at CAM.
+      if lang == "fr"
+        p Il a étudié avec Sebastián Rojo. Plongé dans l'étude de la jonglerie, de l'improvisation, des langues, de la cognition, du comportement, de l'histoire, des arts et des sciences humaines, et des systèmes en général. Enseigne la programmation et donne des ateliers de jonglage. Membre du Collectif A-Nido. Exécute en tant que technicien informatique au CAM.
+      if lang == "pt"
+        p Ele estudou com Sebastián Rojo. Mergulhou no estudo de malabarismo, improvisação, linguagens, cognição, comportamento, história, artes e ciências humanas e sistemas em geral. Ensina programação e conduz oficinas de malabarismo. Membro do Coletivo A-Nido. Atua como técnico de informática no CAM.
+      
         
     
