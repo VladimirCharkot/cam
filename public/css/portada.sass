@@ -5,7 +5,7 @@
 html
   scroll-behavior: smooth
 
-video
+video.desktop
   position: absolute
   top: 50%
   left: 50%
@@ -15,6 +15,14 @@ video
   min-height: 100%
   width: auto
   height: auto
+  z-index: -1000
+  overflow: hidden
+
+video.mobile
+  /*position: absolute*/
+  top: 0
+  left: 0
+  width: 100vw
   z-index: -1000
   overflow: hidden
 
