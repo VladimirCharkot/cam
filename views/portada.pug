@@ -1,9 +1,10 @@
-#portada
+#portada(class=celu ? 'mobile' : 'desktop')
   #telon
     include lenguajes
     #titulo
       h1=titulo
     #flechita
     #logo
-  video(autoplay=true loop=true muted=true class=celu ? 'mobile' : 'desktop')
+  if !celu
+  video(autoplay=true loop=true muted=true )
     source(src="/video/portada-web-h264.mp4" type="video/mp4")
