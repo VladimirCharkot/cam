@@ -5,26 +5,45 @@
 html
   scroll-behavior: smooth
 
-#portada.desktop video
-  position: absolute
-  top: 50%
-  left: 50%
-  -webkit-transform: translateX(-50%) translateY(-50%)
-  transform: translateX(-50%) translateY(-50%)
-  min-width: 100%
-  min-height: 100%
-  width: auto
-  height: auto
-  z-index: -1000
-  overflow: hidden
+#portada.desktop 
+  video
+    position: absolute
+    top: 50%
+    left: 50%
+    -webkit-transform: translateX(-50%) translateY(-50%)
+    transform: translateX(-50%) translateY(-50%)
+    min-width: 100%
+    min-height: 100%
+    width: auto
+    height: auto
+    z-index: -1000
+    overflow: hidden
+  .lang img
+    width: 2vw
+    margin: 1vw
 
-#portada.mobile video
-  /*position: absolute*/
-  top: 0
-  left: 0
-  width: 100vw
-  z-index: -1000
-  overflow: hidden
+
+#portada.mobile 
+  video
+    /*position: absolute*/
+    top: 0
+    left: 0
+    width: 100vw
+    z-index: -1000
+    overflow: hidden
+    visibility: hidden
+  #telon
+    background-image: url(/img/logo19.png)
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    background-color: #ffffffd6
+    background-blend-mode: lighten
+  #logo
+    visibility: hidden
+  .lang img
+    width: 5vw
+    margin: 1vw
 
 #portada
   width: 100vw
@@ -43,9 +62,6 @@ html
       position: absolute
       top: 2vh
       right: 2vw
-      img
-        width: 2vw
-        margin: 1vw
 
     #titulo
       text-shadow: rgba(10, 189, 240, 0.3) 3px 3px 0px, rgba(254, 1, 1, 0.3) -3px -3px 0px, rgba(240, 200, 0, 0.3) 3px -3px 0px
