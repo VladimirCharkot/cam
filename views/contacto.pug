@@ -1,0 +1,171 @@
+extends layout
+
+block contenido
+    
+  #contacto
+  
+    if lang == "es"
+      script.
+        let textos_lbl = {
+          Telegram : "Cuenta o número",
+          Mail : "Dirección",
+          Instagram : "Cuenta",
+          Facebook : "Cuenta",
+          Whatsapp : "Número",
+          Otro : "¿Cómo te contactamos?"
+        }
+        
+      h2 Contacto
+      p ¿Querés preguntar o comentarnos algo? ¿Nos querés mandar un abrazo? ¿Nos invitás un mate? ¡Escribinos! Nos llega por telegram 
+      .g
+        label ¿Nos decís tu nombre?
+        input#nombre
+      .g
+        label ¿Por dónde te podemos responder?
+        select#medio Telegram
+          option Telegram
+          option Mail
+          option Instagram
+          option Whatsapp
+          option Facebook
+          option Otro
+      .g
+        label#mutante Cuenta o número
+        input#direccion
+        
+    if lang == "en"
+      script.
+        let textos_lbl = {
+          Telegram : "Username or number",
+          Mail : "Address",
+          Instagram : "Account",
+          Facebook : "Username or id",
+          Whatsapp : "Number",
+          Another : "How can we contact you?"
+        }
+        
+      h2 Contact Us
+      p Would you like to ask anything? Do you want to send us a hug? Can you invite us a #[em mate]? Write us! It arrives on telegram
+      .g
+        label ¿Would you tell us your name?
+        input#nombre
+      .g
+        label ¿Where can we reach you?
+        select#medio Telegram
+          option Telegram
+          option Mail
+          option Instagram
+          option Whatsapp
+          option Facebook
+          option Another
+      .g
+        label#mutante Username or number
+        input#direccion
+        
+    if lang == "fr"
+      script.
+        let textos_lbl = {
+          Telegram : "Nom d'utilisateur ou numéro",
+          Mail : "Adresse",
+          Instagram : "Compte",
+          Facebook : "Nom d'utilisateur ou identifiant",
+          Whatsapp : "Numéro",
+          Autre : "Comment pouvons-nous vous contacter?"
+        }
+      h2 Nous contacter
+      p Voulez-vous demander ou commenter quelque chose? Voulez-vous nous envoyer un câlin? Peux-tu nous inviter un #[em mate]? Écrivez-nous! Il nous vient par telegram
+      .g
+        label Pouvez-vous nous dire votre nom ?
+        input#nombre
+      .g
+        label Où pouvons-nous vous répondre ?
+        select#medio Telegram
+          option Telegram
+          option Mail
+          option Instagram
+          option Whatsapp
+          option Facebook
+          option Autre
+      .g
+        label#mutante Cuenta o número
+        input#direccion
+        
+    if lang == "pt"
+      script.
+        let textos_lbl = {
+          Telegram : "Nome de usuário ou número",
+          Mail : "Direção",
+          Instagram : "Conta",
+          Facebook : "Nome de usuário ou id",
+          Whatsapp : "Telefone",
+          Outro : "Como podemos entrar em contato com você?"
+        }
+        
+      h2 Contate-nos
+      p Você gostaria de perguntar alguma coisa? Você quer nos enviar um abraço? Você pode nos convidar um #[em mate]? Escreva para nós! Chega em telegram
+      .g
+        label Você poderia nos dizer seu nome?
+        input#nombre
+      .g
+        label Onde podemos encontrar você?
+        select#medio Telegram
+          option Telegram
+          option Mail
+          option Instagram
+          option Whatsapp
+          option Facebook
+          option Outro
+      .g
+        label#mutante Nome de usuário ou número
+        input#direccion
+        
+    textarea#texto
+    p#flash
+    button#enviar(onclick="enviar()") Enviar
+    ul(style="margin-top: 3em;") 
+      li conveargentinademalabares@gmail.com
+      li #[a(href="https://www.instagram.com/conveargentinademalabares/") Instagram] 
+      li #[a(href="https://www.facebook.com/convencionargentinademalabares/") Facebook]
+    
+  
+
+  script.
+  
+    let lbl = document.querySelector("#mutante")
+    document.querySelector("#medio").value = "Telegram"
+    
+    document.querySelector('#medio').addEventListener('change', e => {
+      lbl.textContent = textos_lbl[e.target.value]
+    })
+
+
+    let enviar = () => {
+      let nombre = document.querySelector('#nombre').value
+      let medio = document.querySelector('#medio').value
+      let direccion = document.querySelector('#direccion').value
+      let texto = document.querySelector('#texto').value
+      
+      if(nombre == "" || medio == "" || direccion == "" || texto == ""){
+        flash("¡Faltan datos!")
+        return 
+      } 
+      
+      fetch('/contacto',{
+        method: 'post',
+        headers: {
+          'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({nombre, medio, direccion, texto})
+      })
+      .then(r => r.json())
+      .then(r => r.ok ? flash("¡Enviado! Gracias 😁") : flash("Hay que esperar un ratito para mandar otro mensaje che..."))
+    }
+
+    let flash = (texto) => {
+      let f = document.querySelector("#flash")
+      f.textContent = texto
+      f.classList.add("visible")
+      setTimeout(() => {
+        f.classList.remove("visible")
+      }, 5000)
+    } 

@@ -1,0 +1,38 @@
+#contacto
+  h2
+    margin-top: 2em
+    color: #531436
+    font-weight: 400
+    font-size: 2em
+    font-family: 'Lulo'
+  display: flex
+  flex-direction: column
+  width: 70vw
+  margin: 5vw
+  .g
+    padding: 2vw
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    *
+      padding: 1vw
+  #texto
+    height: 40vh
+  #enviar
+    width: 10vw
+    margin: 1em
+    padding: 1em
+    align-self: end
+    background: white
+    border-radius: 1em
+  #flash
+    opacity: 0
+    transition: 1s
+    text-align: right
+    &.visible
+      opacity: 1
+  ul
+    list-style: none
+    li
+      margin: 1em

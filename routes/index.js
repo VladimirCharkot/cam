@@ -1,19 +1,20 @@
-let express = require('express')
-let md = require('markdown-it')()
-let fs = require('fs/promises')
-let _ = require('lodash')
-let router = express.Router()
+const express = require('express')
+const md = require('markdown-it')()
+const fs = require('fs/promises')
+const _ = require('lodash')
+const tg = require('./tg')
+const router = express.Router()
+
+const { logaccess, lenguaje, fecha, hora } = require('./middle')
+
+const redis = require("./redisclient")
 
 
-let lenguaje = (req, res, next) => {
-  if(!req.params.lang) req.params.lang = 'es'
-  if (!['es', 'en', 'fr', 'pt'].includes(req.params.lang)) return res.status(404)
-  next()
-}
 
 
 
-router.get('/:lang?/historia', [lenguaje, async (req, res) => {
+
+router.get('/:lang?/historia', [logaccess, lenguaje, async (req, res) => {
 
   let titulos = {
     es: 'CAM22 — Historia',
@@ -39,7 +40,7 @@ router.get('/:lang?/historia', [lenguaje, async (req, res) => {
 }])
 
 
-router.get('/:lang?/orga', [lenguaje, (req, res) => {
+router.get('/:lang?/orga', [logaccess, lenguaje, (req, res) => {
 
   let titulos = {
     es: 'CAM22 — Organización',
@@ -58,7 +59,7 @@ router.get('/:lang?/orga', [lenguaje, (req, res) => {
 }])
 
 
-router.get('/:lang?/', [lenguaje, async (req, res) => {
+router.get('/:lang?/', [logaccess, lenguaje, async (req, res) => {
 
   let titulos = {
     es: 'Convención Argentina de Malabares',

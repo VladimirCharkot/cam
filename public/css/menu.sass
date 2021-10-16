@@ -1,5 +1,12 @@
+@import skin
+
 .menu
-  background: white
+  font-family: 'Cabin Sketch', sans-serif
+  font-family: 'Lulo'
+  font-size: 2em
+  background: $color-menu
+
+  position: relative
   width: 100vw
   display: flex
   flex-direction: row
@@ -7,16 +14,18 @@
   justify-content: space-around
 
   a
+    color: $color-base
     display: block
     flex-grow: 1
     text-align: center
-    padding: 2em 0
-    transition: 0.5s
+    padding: 1em 0
+    transition: 0.2s
 
     &:hover
-      background: #e9ffff
+      text-shadow: 4px 4px black
+
 
 @media only screen and (max-width: 1050px)
   .menu
     a
-      font-size: 2em
+      font-size: 0.7em

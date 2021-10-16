@@ -2,14 +2,11 @@ extends layout
 
 block cabecera
   include portada
-  //- if celu
-  //-   include portada_mobile
-  //- else
-  //-   include portada_desktop
     
   script(src="/js/front.js")
 
 block contenido
+  include divisores
 
   for articulo in articulos
     .articulo(id=articulo.id)!=articulo.contenido

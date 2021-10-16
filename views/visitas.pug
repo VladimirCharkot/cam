@@ -1,0 +1,153 @@
+extends layout
+
+block contenido
+  script(type="application/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js")
+  .articulo
+    h2 Visitas
+    select#rango(onchange="update_chart(this)") Día
+      option Hora
+      option Día
+      option Semana
+      //- option Mes
+      //- option Año
+    div
+      canvas#grafico(style="margin-bottom: 20vh;")
+      
+  script.
+  
+    let chart = new Chart(document.querySelector('#grafico'),
+      {
+        type: 'line',
+        data: {
+          labels: [],
+          datasets: [{
+            label: 'Visitas',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [],
+          }]
+        },
+        options: {}
+      }
+    )
+    
+    let update_chart = (e) => {
+      const endpoints = {
+        Hora : "/admin/hora",
+        Día : "/admin/dia",
+        Semana : "/admin/semana",
+        Mes : "/admin/mes",
+        Año : "/admin/año",
+      }
+      
+      const contar_segmentado = (dataset, limites) => {
+        let ps = _.range(limites.length - 1)
+                  .map(i => dataset
+                            .filter(e => e.t > limites[i] && 
+                                         e.t < limites[i+1]).length)
+        ps.push(dataset.filter(e => e.t > limites[limites.length - 1]).length)
+        return ps
+      } 
+      
+      const confeccion = {
+        Hora : respuesta => {
+          let now = Date.now() - Date.now() % (1000 * 60)
+          
+          let momentos = _.range(0, 13)
+                          .map(n => now - 1000 * 60 * 10 * n)
+                          .reverse()
+          
+          let labels = momentos.map(t => new Date(t).toISOString().slice(11,16))
+          
+          let ps = contar_segmentado(respuesta, momentos)
+          
+          let data = {
+            labels: labels,
+            datasets: [{
+              label: 'Visitas',
+              backgroundColor: 'rgb(255, 99, 132)',
+              borderColor: 'rgb(255, 99, 132)',
+              data: ps,
+            }]
+          }
+          
+          chart.data = data
+          chart.update()
+          
+        },
+        Día : respuesta => {
+          
+          let now = Date.now() - Date.now() % (1000 * 60 * 60)
+          
+          let momentos = _.range(0, 25, 2)
+                          .map(n => now - 1000 * 60 * 60 * n)
+                          .reverse()
+
+          let labels = momentos.map(t => new Date(t).toTimeString().slice(0,5))
+          
+          let ps = _.range(momentos.length - 1).map(i => respuesta.filter(e => e.t > momentos[i] && e.t < momentos[i+1]).length)
+          ps.push(respuesta.filter(e => e.t > momentos[momentos.length - 1]).length)
+          
+          
+          let data = {
+            labels: labels,
+            datasets: [{
+              label: 'Visitas',
+              backgroundColor: 'rgb(255, 99, 132)',
+              borderColor: 'rgb(255, 99, 132)',
+              data: ps,
+            }]
+          }
+          
+          chart.data = data
+          chart.update()
+          
+        },
+        Semana : respuesta => {
+          let now = Date.now() - Date.now() % (1000 * 60 * 60)
+          
+          let momentos = _.range(0, 8)
+                          .map(n => now - 1000 * 60 * 60 * 24 * n)
+                          .reverse()
+          
+          let labels = momentos.map(t => new Date(t).toDateString().slice(4,10))
+          
+          let ps = contar_segmentado(respuesta, momentos)
+          
+          let data = {
+            labels: labels,
+            datasets: [{
+              label: 'Visitas',
+              backgroundColor: 'rgb(255, 99, 132)',
+              borderColor: 'rgb(255, 99, 132)',
+              data: ps,
+            }]
+          }
+          
+          chart.data = data
+          chart.update()
+        },
+        Mes : respuesta => console.log(respuesta),
+        Año : respuesta => console.log(respuesta),
+      }
+      
+      
+      let endpoint = endpoints[e.value]
+      console.log(`Fetcheando ${endpoint}`)
+      
+      fetch(endpoint).then(r => r.json())
+      .then(r => {
+        console.log(r)
+        for (let acceso of r){
+          //- acceso.t -= 1000 * 60 * 60 * 3
+        }
+        confeccion[e.value](r)
+      })
+      
+      
+    }
+    
+    update_chart(document.querySelector("#rango"))
+
+
+block pie

@@ -5,7 +5,6 @@ flechita.addEventListener('click', () => scroll(0, portada.getClientRects()[0].h
 // Quitar el párrafo que envuelve a las img que vienen de md
 let corregir_imagenes = () => {
   document.querySelectorAll('p img').forEach(i =>{
-    console.log(i)
     i.parentElement.replaceWith(i)
     } )
 }
