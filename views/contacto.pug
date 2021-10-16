@@ -158,7 +158,16 @@ block contenido
         body: JSON.stringify({nombre, medio, direccion, texto})
       })
       .then(r => r.json())
-      .then(r => r.ok ? flash("¡Enviado! Gracias 😁") : flash("Hay que esperar un ratito para mandar otro mensaje che..."))
+      .then(r => {
+        if(r.ok){
+          flash("¡Enviado! Gracias 😁")
+          nombre.value = ''
+          medio.value = 'Telegram'
+          direccion.value = ''
+          texto.value = ''
+        }else{
+          flash("Hay que esperar un ratito para mandar otro mensaje che..."))
+        }
     }
 
     let flash = (texto) => {
