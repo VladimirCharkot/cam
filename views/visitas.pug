@@ -49,6 +49,12 @@ block contenido
         return ps
       } 
       
+      const linea_visitas = {
+        label: 'Visitas',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)'
+      }
+      
       const confeccion = {
         Hora : respuesta => {
           let now = Date.now() - Date.now() % (1000 * 60)
@@ -57,18 +63,13 @@ block contenido
                           .map(n => now - 1000 * 60 * 10 * n)
                           .reverse()
           
-          let labels = momentos.map(t => new Date(t).toISOString().slice(11,16))
+          let labels = momentos.map(t => new Date(t).toTimeString().slice(0,5))
           
           let ps = contar_segmentado(respuesta, momentos)
           
           let data = {
             labels: labels,
-            datasets: [{
-              label: 'Visitas',
-              backgroundColor: 'rgb(255, 99, 132)',
-              borderColor: 'rgb(255, 99, 132)',
-              data: ps,
-            }]
+            datasets: [{...linea_visitas, data: ps}]
           }
           
           chart.data = data
@@ -91,12 +92,7 @@ block contenido
           
           let data = {
             labels: labels,
-            datasets: [{
-              label: 'Visitas',
-              backgroundColor: 'rgb(255, 99, 132)',
-              borderColor: 'rgb(255, 99, 132)',
-              data: ps,
-            }]
+            datasets: [{...linea_visitas, data: ps}]
           }
           
           chart.data = data
@@ -104,7 +100,7 @@ block contenido
           
         },
         Semana : respuesta => {
-          let now = Date.now() - Date.now() % (1000 * 60 * 60)
+          let now = Date.now() - Date.now() % (1000 * 60 * 60 * 24)
           
           let momentos = _.range(0, 8)
                           .map(n => now - 1000 * 60 * 60 * 24 * n)
@@ -116,12 +112,7 @@ block contenido
           
           let data = {
             labels: labels,
-            datasets: [{
-              label: 'Visitas',
-              backgroundColor: 'rgb(255, 99, 132)',
-              borderColor: 'rgb(255, 99, 132)',
-              data: ps,
-            }]
+            datasets: [{...linea_visitas, data: ps}]
           }
           
           chart.data = data
@@ -137,10 +128,6 @@ block contenido
       
       fetch(endpoint).then(r => r.json())
       .then(r => {
-        console.log(r)
-        for (let acceso of r){
-          //- acceso.t -= 1000 * 60 * 60 * 3
-        }
         confeccion[e.value](r)
       })
       

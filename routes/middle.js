@@ -19,7 +19,6 @@ let momento = (dh = 0) => {
 }
 
 exports.logaccess = (req, res, next) => {
-  console.log(`Logueando k cam|${fecha()} v ${hora()}|${req.ip}|${req.path}`)
   redis.rpush(`cam|${fecha()}`, `${Date.now()}|${req.ip}|${req.path}`)
   next()
 }
