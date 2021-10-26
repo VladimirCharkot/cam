@@ -1,9 +1,7 @@
 @import skin
 
 .menu
-  font-family: 'Cabin Sketch', sans-serif
   font-family: 'Lulo'
-  font-size: 2em
   background: $color-menu
 
   position: relative
@@ -24,8 +22,10 @@
     &:hover
       text-shadow: 4px 4px black
 
+@media only screen and (min-width: 1050px)
+  .menu
+    font-size: 1.2em
 
 @media only screen and (max-width: 1050px)
   .menu
-    a
-      font-size: 0.7em
+    font-size: 0.7em

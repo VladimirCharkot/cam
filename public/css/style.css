@@ -109,9 +109,7 @@ html {
     transform: translateY(5vh) rotate(135deg); } }
 
 .menu {
-  font-family: 'Cabin Sketch', sans-serif;
   font-family: 'Lulo';
-  font-size: 2em;
   background: #531436;
   position: relative;
   width: 100vw;
@@ -129,8 +127,12 @@ html {
     .menu a:hover {
       text-shadow: 4px 4px black; }
 
+@media only screen and (min-width: 1050px) {
+  .menu {
+    font-size: 1.2em; } }
+
 @media only screen and (max-width: 1050px) {
-  .menu a {
+  .menu {
     font-size: 0.7em; } }
 
 .articulo {
@@ -141,8 +143,7 @@ html {
     color: #531436;
     text-align: center;
     font-weight: 400;
-    font-size: 2em;
-    font-family: 'Cabin Sketch';
+    font-size: 1.2em;
     font-family: 'Lulo'; }
   .articulo p {
     padding: 0 2em;
@@ -155,7 +156,7 @@ hr {
   margin: 5vw 20vw; }
 
 #cam22 h2:first-of-type {
-  font-size: 3em; }
+  font-size: 2em; }
 
 #escuelita img {
   width: 38vw;
