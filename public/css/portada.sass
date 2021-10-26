@@ -24,21 +24,35 @@ html
 
 
 #portada.mobile
-  video
-    /*position: absolute*/
-    top: 0
-    left: 0
-    width: 100vw
-    z-index: -1000
-    overflow: hidden
-    visibility: hidden
   #telon
-    background-image: url(/img/logos22.png)
-    background-size: contain
-    background-position: center
-    background-repeat: no-repeat
-    background-color: #ffffffd6
-    background-blend-mode: lighten
+    position: relative
+    overflow-x: hidden
+    overflow-y: scroll
+    perspective: 8px
+    perspective-origin: 0%
+    display: flex
+    #titulo
+      position: absolute
+      top: 15vw
+      left: 10vw
+      transform: translateZ(1px)
+    #flamenco, #logo22
+      position: absolute
+      background-size: contain
+    #flamenco
+      width: 14vw
+      height: 36.524vw
+      background-image: url(/img/flamenco.png)
+      right: 30vw
+      bottom: 15vw
+      transform: translateZ(2px)
+    #logo22
+      width: 10vw
+      height: 16.25vw
+      background-image: url(/img/logo22.png)
+      left: 10vw
+      bottom: 15vw
+      transform: translateZ(2px)
   #logo
     visibility: hidden
   .lang img
