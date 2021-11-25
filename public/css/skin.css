@@ -53,6 +53,6 @@ html{
 
 
 
-.articulo h2, .articulo h3, .contacto h2{
+.articulo h2, .articulo h3, #contacto h2{
   color: var(--color-menu);
 }
