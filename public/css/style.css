@@ -111,7 +111,7 @@ html {
       background-image: url(/img/logo22.png);
       background-size: contain;
       background-repeat: no-repeat;
-      bottom: 2em;
+      bottom: 3em;
       right: 3em; }
 
 @keyframes flotar {
@@ -121,10 +121,13 @@ html {
     transform: translateY(5vh) rotate(135deg); } }
 
 html {
-  --color-menu: #9b4b78;
   --color-base: #FFF5E9;
+  --color-menu: #9b4b78;
   --color-comp-1: #33a8d0;
   --color-comp-2: #3a6f35; }
+
+body {
+  background-color: var(--color-base); }
 
 .menu {
   background: var(--color-menu); }
@@ -416,10 +419,13 @@ hr {
       margin: 1em; }
 
 html {
-  --color-menu: #9b4b78;
   --color-base: #FFF5E9;
+  --color-menu: #9b4b78;
   --color-comp-1: #33a8d0;
   --color-comp-2: #3a6f35; }
+
+body {
+  background-color: var(--color-base); }
 
 .menu {
   background: var(--color-menu); }
@@ -504,8 +510,7 @@ body {
   margin: 0;
   font: 14px "Montserrat", Helvetica, Arial, sans-serif;
   max-width: 100vw;
-  overflow-x: hidden;
-  background: #FFF5E9; }
+  overflow-x: hidden; }
 
 a {
   color: #00B7FF;

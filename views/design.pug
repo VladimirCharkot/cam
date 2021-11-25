@@ -8,7 +8,7 @@ block cabecera
 block contenido
   //- include ../public/img/icon/onda_vertical.svg
   
-  img(src="/img/flamenco.png", style="height: 10vh; position: absolute; top:10vh; left: 0;")
+  img(src="/img/flamenco.png", style="height: 10vh; position: absolute; top:10vh; left: 1vw; z-index:1;")
     
   .editor
     style.
@@ -21,20 +21,26 @@ block contenido
     input#c1(type="color") 
     input#c2(type="color") 
     input#c3(type="color") 
+    input#c4(type="color") 
     script.
       window.addEventListener('load', () => {
+        let estilo = getComputedStyle(document.documentElement)
         let c1 = document.querySelector('#c1')
         let c2 = document.querySelector('#c2')
         let c3 = document.querySelector('#c3')
-        c1.value = '#ffffff'
-        c2.value = '#ffffff'
-        c3.value = '#ffffff'
-        c1.addEventListener('input', () => {
-          document.documentElement.style.setProperty('--color-menu', c1.value)
-          console.log(c1.value)
-          } )
-        c2.addEventListener('input', () => document.documentElement.style.setProperty('--color-base', c2.value))
-        c3.addEventListener('input', () => document.documentElement.style.setProperty('--color-comp', c3.value))
+        let c4 = document.querySelector('#c4')
+        c1.value = estilo.getPropertyValue('--color-base')
+        c2.value = estilo.getPropertyValue('--color-menu')
+        c3.value = estilo.getPropertyValue('--color-comp-1')
+        c4.value = estilo.getPropertyValue('--color-comp-2')
+        c1.addEventListener('input', () => 
+          document.documentElement.style.setProperty('--color-base', c1.value))
+        c2.addEventListener('input', () => 
+          document.documentElement.style.setProperty('--color-menu', c2.value))
+        c3.addEventListener('input', () => 
+          document.documentElement.style.setProperty('--color-comp-1', c3.value))
+        c4.addEventListener('input', () => 
+            document.documentElement.style.setProperty('--color-comp-2', c4.value))
       })
       
   
