@@ -108,7 +108,7 @@ html {
       position: absolute;
       width: 15vw;
       height: 23.2vh;
-      background-image: url(/img/logo19.png);
+      background-image: url(/img/logo22.png);
       background-size: contain;
       background-repeat: no-repeat;
       bottom: 2em;
@@ -156,7 +156,7 @@ html {
 .custom-shape-divider-top-1634244157 path:nth-of-type(2) {
   fill: var(--color-comp-2); }
 
-.articulo h2, .articulo h3 {
+.articulo h2, .articulo h3, #contacto h2 {
   color: var(--color-menu); }
 
 .menu {
@@ -384,7 +384,6 @@ hr {
   margin: 5vw; }
   #contacto h2 {
     margin-top: 2em;
-    color: #531436;
     font-weight: 400;
     font-size: 2em;
     font-family: 'Lulo'; }
@@ -452,7 +451,7 @@ html {
 .custom-shape-divider-top-1634244157 path:nth-of-type(2) {
   fill: var(--color-comp-2); }
 
-.articulo h2, .articulo h3 {
+.articulo h2, .articulo h3, #contacto h2 {
   color: var(--color-menu); }
 
 .custom-shape-divider-top-1634214673 {
