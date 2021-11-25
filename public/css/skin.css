@@ -1,0 +1,58 @@
+html{
+  --color-menu: #9b4b78;
+  --color-base: #FFF5E9;
+  --color-comp-1: #33a8d0;
+  --color-comp-2: #3a6f35;
+}
+
+.menu{
+  background: var(--color-menu);
+}
+
+.menu a {
+  color: var(--color-base);
+}
+
+.custom-shape-divider-top-1634214673 .shape-fill{
+  fill: var(--color-menu);
+}
+
+
+
+
+.custom-shape-divider-bottom-1634243669 .shape-fill{
+  fill: var(--color-menu);
+}
+
+.custom-shape-divider-bottom-1634243669 path:nth-of-type(1){
+  fill: var(--color-comp-1);
+  transform: scaleY(1.5);
+}
+
+.custom-shape-divider-bottom-1634243669 path:nth-of-type(2){
+  fill: var(--color-comp-2);
+}
+
+
+
+
+/* Barra abajo */
+.custom-shape-divider-top-1634244157 .shape-fill{
+  fill: var(--color-menu);
+}
+
+.custom-shape-divider-top-1634244157 path:nth-of-type(1){
+  fill: var(--color-comp-1);
+  transform: scaleY(1.5);
+}
+
+.custom-shape-divider-top-1634244157 path:nth-of-type(2){
+  fill: var(--color-comp-2);
+}
+
+
+
+
+.articulo h2, .articulo h3{
+  color: var(--color-menu);
+}

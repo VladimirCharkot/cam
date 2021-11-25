@@ -1,10 +1,31 @@
 const express = require("express")
 const router = express.Router()
 
+const fs = require('fs/promises')
+const md = require('markdown-it')()
+
 const _ = require("lodash")
 
 const redis = require("./redisclient")
 const { fecha, hora } = require('./middle')
+
+
+router.get("/design", async (req, res) => {
+  let md_cam22 = await fs.readFile(`public/md/es/cam22.md`, 'utf8')
+  let md_escuelita = await fs.readFile(`public/md/es/la_escuelita.md`, 'utf8')
+  let md_miramar = await fs.readFile(`public/md/es/miramar.md`, 'utf8')
+
+  res.render('design', {
+    titulo: 'Convención Argentina de Malabares',
+    lang: 'es',
+    celu: req.useragent.isMobile,
+    articulos: [
+      {id: 'cam22', contenido: md.render(md_cam22)},
+      {id: 'escuelita', contenido: md.render(md_escuelita)},
+      {id: 'miramar', contenido: md.render(md_miramar)}
+    ]}
+  )
+})
 
 
 router.get("/status", async (req, res) => {
@@ -54,10 +75,17 @@ router.get("/semana", async (req, res) => {
   res.json(entradas)
 })
 
-// router.get("/mes", async (req, res) => {
-//
-// })
-//
+router.get("/mes", async (req, res) => {
+  let fechas = _.range(30)
+    .map(d => fecha(-d))
+
+  let base = []
+  for (let f of fechas) base.push(await redis.lrange(`cam|${f}`, 0, -1))
+  let entradas = _.flatten(base).map(objetificar)
+
+  res.json(entradas)
+})
+
 // router.get("/año", async (req, res) => {
 //
 // })

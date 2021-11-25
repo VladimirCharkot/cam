@@ -40,12 +40,11 @@ html {
     position: absolute;
     background-size: contain; }
   #portada.mobile #telon #flamenco {
-    width: 14vh;
-    height: 36.524vh;
+    width: calc(1.5 * 14vh);
+    height: calc(1.5 * 36.524vh);
     background-image: url(/img/flamenco.png);
-    right: 20vh;
-    bottom: 20vh;
-    transform: translateZ(2px); }
+    right: 5vh;
+    bottom: 10vh; }
   #portada.mobile #telon #logo22 {
     width: 10vh;
     height: 16.25vh;
@@ -121,9 +120,47 @@ html {
   to {
     transform: translateY(5vh) rotate(135deg); } }
 
+html {
+  --color-menu: #9b4b78;
+  --color-base: #FFF5E9;
+  --color-comp-1: #33a8d0;
+  --color-comp-2: #3a6f35; }
+
+.menu {
+  background: var(--color-menu); }
+
+.menu a {
+  color: var(--color-base); }
+
+.custom-shape-divider-top-1634214673 .shape-fill {
+  fill: var(--color-menu); }
+
+.custom-shape-divider-bottom-1634243669 .shape-fill {
+  fill: var(--color-menu); }
+
+.custom-shape-divider-bottom-1634243669 path:nth-of-type(1) {
+  fill: var(--color-comp-1);
+  transform: scaleY(1.5); }
+
+.custom-shape-divider-bottom-1634243669 path:nth-of-type(2) {
+  fill: var(--color-comp-2); }
+
+/* Barra abajo */
+.custom-shape-divider-top-1634244157 .shape-fill {
+  fill: var(--color-menu); }
+
+.custom-shape-divider-top-1634244157 path:nth-of-type(1) {
+  fill: var(--color-comp-1);
+  transform: scaleY(1.5); }
+
+.custom-shape-divider-top-1634244157 path:nth-of-type(2) {
+  fill: var(--color-comp-2); }
+
+.articulo h2, .articulo h3 {
+  color: var(--color-menu); }
+
 .menu {
   font-family: 'Lulo';
-  background: #531436;
   position: relative;
   width: 100vw;
   display: flex;
@@ -131,7 +168,6 @@ html {
   align-items: center;
   justify-content: space-around; }
   .menu a {
-    color: #FFF5E9;
     display: block;
     flex-grow: 1;
     text-align: center;
@@ -146,14 +182,14 @@ html {
 
 @media only screen and (max-width: 1050px) {
   .menu {
-    font-size: 0.7em; } }
+    font-size: 1.5em; } }
 
 .articulo {
   position: relative;
-  padding: 0 10vw; }
+  padding: 0 10vw;
+  margin-top: 5em; }
   .articulo h2 {
     margin-top: 2em;
-    color: #531436;
     text-align: center;
     font-weight: 400;
     font-size: 1.2em;
@@ -380,6 +416,45 @@ hr {
     #contacto ul li {
       margin: 1em; }
 
+html {
+  --color-menu: #9b4b78;
+  --color-base: #FFF5E9;
+  --color-comp-1: #33a8d0;
+  --color-comp-2: #3a6f35; }
+
+.menu {
+  background: var(--color-menu); }
+
+.menu a {
+  color: var(--color-base); }
+
+.custom-shape-divider-top-1634214673 .shape-fill {
+  fill: var(--color-menu); }
+
+.custom-shape-divider-bottom-1634243669 .shape-fill {
+  fill: var(--color-menu); }
+
+.custom-shape-divider-bottom-1634243669 path:nth-of-type(1) {
+  fill: var(--color-comp-1);
+  transform: scaleY(1.5); }
+
+.custom-shape-divider-bottom-1634243669 path:nth-of-type(2) {
+  fill: var(--color-comp-2); }
+
+/* Barra abajo */
+.custom-shape-divider-top-1634244157 .shape-fill {
+  fill: var(--color-menu); }
+
+.custom-shape-divider-top-1634244157 path:nth-of-type(1) {
+  fill: var(--color-comp-1);
+  transform: scaleY(1.5); }
+
+.custom-shape-divider-top-1634244157 path:nth-of-type(2) {
+  fill: var(--color-comp-2); }
+
+.articulo h2, .articulo h3 {
+  color: var(--color-menu); }
+
 .custom-shape-divider-top-1634214673 {
   position: absolute;
   top: 0;
@@ -395,12 +470,9 @@ hr {
   width: calc(115% + 1.3px);
   height: 111px; }
 
-.custom-shape-divider-top-1634214673 .shape-fill {
-  fill: #531436; }
-
 .custom-shape-divider-bottom-1634243669 {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -413,25 +485,20 @@ hr {
   width: calc(109% + 1.3px);
   height: 39px; }
 
-.custom-shape-divider-bottom-1634243669 .shape-fill {
-  fill: #531436; }
-
 .custom-shape-divider-top-1634244157 {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
-  line-height: 0; }
+  line-height: 0;
+  margin-bottom: 1em; }
 
 .custom-shape-divider-top-1634244157 svg {
   position: relative;
   display: block;
   width: calc(109% + 1.3px);
   height: 40px; }
-
-.custom-shape-divider-top-1634244157 .shape-fill {
-  fill: #531436; }
 
 body {
   padding: 0;

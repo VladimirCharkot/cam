@@ -1,0 +1,44 @@
+extends layout
+
+block cabecera
+  include portada
+    
+  script(src="/js/front.js")
+
+block contenido
+  //- include ../public/img/icon/onda_vertical.svg
+  
+  img(src="/img/flamenco.png", style="height: 10vh; position: absolute; top:10vh; left: 0;")
+    
+  .editor
+    style.
+      .editor{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+    input#c1(type="color") 
+    input#c2(type="color") 
+    input#c3(type="color") 
+    script.
+      window.addEventListener('load', () => {
+        let c1 = document.querySelector('#c1')
+        let c2 = document.querySelector('#c2')
+        let c3 = document.querySelector('#c3')
+        c1.value = '#ffffff'
+        c2.value = '#ffffff'
+        c3.value = '#ffffff'
+        c1.addEventListener('input', () => {
+          document.documentElement.style.setProperty('--color-menu', c1.value)
+          console.log(c1.value)
+          } )
+        c2.addEventListener('input', () => document.documentElement.style.setProperty('--color-base', c2.value))
+        c3.addEventListener('input', () => document.documentElement.style.setProperty('--color-comp', c3.value))
+      })
+      
+  
+  include divisores
+
+  for articulo in articulos
+    .articulo(id=articulo.id)!=articulo.contenido
