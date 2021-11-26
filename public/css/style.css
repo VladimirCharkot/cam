@@ -105,14 +105,23 @@ html {
       animation-iteration-count: 8;
       cursor: pointer; }
     #portada #telon #logo {
-      position: absolute;
-      width: 15vw;
-      height: 23.2vh;
+      width: calc(0.75 * 15vw);
+      height: calc(0.75 * 23.2vw);
       background-image: url(/img/logo22.png);
       background-size: contain;
       background-repeat: no-repeat;
-      bottom: 3em;
-      right: 3em; }
+      position: absolute;
+      bottom: 5vh;
+      right: 12vw; }
+    #portada #telon #flamenco {
+      width: calc(0.45 * 14vw);
+      height: calc(0.45 * 36.524vw);
+      background-image: url(/img/flamenco.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: 5vh;
+      right: 3vw; }
 
 @keyframes flotar {
   from {
