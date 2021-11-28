@@ -1,3 +1,4 @@
 node_modules
 .tg_token
 **/libwebp
+dump.rdb

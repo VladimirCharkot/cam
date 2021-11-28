@@ -8,7 +8,7 @@ block contenido
       option Hora
       option Día
       option Semana
-      //- option Mes
+      option Mes
       //- option Año
     div
       canvas#grafico(style="margin-bottom: 20vh;")
@@ -118,7 +118,27 @@ block contenido
           chart.data = data
           chart.update()
         },
-        Mes : respuesta => console.log(respuesta),
+        Mes : respuesta => {
+          let now = Date.now() - Date.now() % (1000 * 60 * 60 * 24)
+          
+          let momentos = _.range(0, 30)
+                          .map(n => now - 1000 * 60 * 60 * 24 * n)
+                          .reverse()
+                          
+          let labels = momentos.map(t => new Date(t).toDateString().slice(4,10))
+                          
+          let ps = contar_segmentado(respuesta, momentos)
+          
+          let data = {
+            labels: labels,
+            datasets: [{...linea_visitas, data: ps}]
+          }
+          
+          chart.data = data
+          chart.update()
+          
+          //console.log(respuesta)
+        },
         Año : respuesta => console.log(respuesta),
       }
       
