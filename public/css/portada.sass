@@ -40,20 +40,20 @@ html
       position: absolute
       background-size: contain
     #flamenco
-      width: calc(1.5 * 14vh)
-      height: calc(1.5 * 36.524vh)
+      width: calc(0.7 * 14vh)
+      height: calc(0.7 * 36.524vh)
       background-image: url(/img/flamenco.png)
       right: 5vh
       bottom: 10vh
-    #logo22
+    #logo
       width: 10vh
       height: 16.25vh
       background-image: url(/img/logo22.png)
       left: 10vh
-      bottom: 20vh
-      transform: translateZ(2px)
-  #logo
-    visibility: hidden
+      bottom: 10vh
+      // transform: translateZ(2px)
+  // #logo
+    // visibility: hidden
   .lang img
     width: 5vh
     margin: 1vw
@@ -128,6 +128,31 @@ html
       position: absolute
       bottom: 5vh
       right: 3vw
+
+    #convocatoria
+      width: calc(18.69vw)
+      height: calc(15.14vw)
+      background-image: url(/img/convocatoria_2.png)
+      background-size: contain
+      background-repeat: no-repeat
+      position: absolute
+      bottom: 65vh
+      right: 5vw
+      transform: rotate(15deg)
+      animation-duration: 1s
+      animation-name: grandir
+      animation-delay: 2s
+      animation-timing-function: ease-in-out
+      animation-direction: alternate
+      animation-iteration-count: 80
+
+@keyframes grandir
+  0% 
+    transform: rotate(15deg)
+  60% 
+    transform: rotate(15deg)
+  100%
+    transform: rotate(15deg) scale(1.2)
 
 @keyframes flotar
   from
