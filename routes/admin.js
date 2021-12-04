@@ -86,7 +86,7 @@ router.get("/mes", async (req, res) => {
   res.json(entradas)
 })
 
-// router.get("/año", async (req, res) => {
+// router.get("/semestre", async (req, res) => {
 //
 // })
 

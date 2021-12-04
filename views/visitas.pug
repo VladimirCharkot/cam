@@ -9,7 +9,7 @@ block contenido
       option Día
       option Semana
       option Mes
-      //- option Año
+      option Semestre
     div
       canvas#grafico(style="margin-bottom: 20vh;")
       
@@ -37,7 +37,7 @@ block contenido
         Día : "/admin/dia",
         Semana : "/admin/semana",
         Mes : "/admin/mes",
-        Año : "/admin/año",
+        Semestre : "/admin/semestre",
       }
       
       const contar_segmentado = (dataset, limites) => {
@@ -139,7 +139,7 @@ block contenido
           
           //console.log(respuesta)
         },
-        Año : respuesta => console.log(respuesta),
+        Semestre : respuesta => console.log(respuesta),
       }
       
       
