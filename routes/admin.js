@@ -29,11 +29,6 @@ router.get("/design", async (req, res) => {
 
 
 router.get("/status", async (req, res) => {
-  // "goaccess /var/log/nginx/access.log -o public/reporte.html --log-format=COMBINED"
-
-  let hoy = fecha()
-
-  let v = await redis.get('visitas')
   res.render('visitas', {titulo: "Visitas al sitio"})
 })
 

@@ -5,7 +5,7 @@ const _ = require('lodash')
 const tg = require('./tg')
 const router = express.Router()
 
-const { logaccess, lenguaje, fecha, hora } = require('./middle')
+const { logaccess, lenguaje } = require('./middle')
 
 const redis = require("./redisclient")
 
