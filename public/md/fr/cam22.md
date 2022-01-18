@@ -7,7 +7,7 @@ La _Convention Argentine de Jonglerie (CAJ)_ revient rechargée, et nous sommes 
 
 Le scénario sera _Miramar de Ansenuza_, Córdoba, juste à côté de la lagune de Mar Chiquita. Là, nous serons hébergés par l'espace culturel _"La Escuelita"_. La date, _du 19 au 24 avril_.
 
-Une fois de plus, le congrès se concentrera sur l'éducation. **Les candidatures pour les séminaires sont ouvertes**. Si vous avez une proposition, [faites-le nous savoir!](https://forms.gle/Siopo6FwKsaT1oMh7)
+Une fois de plus, le congrès se concentrera sur l'éducation. **Les candidatures pour les séminaires sont ouvertes**. Si vous avez une proposition, [faites-le nous savoir!](#)
 
 Cette année, nous travaillerons avec le [Collectif A-Nido](https://colectivoanido.com) pour la réalisation du programme éducatif. Nous nous réjouissons d'organiser des lignes thématiques pour les séminaires (technique, recherche, scène, etc...)
 
