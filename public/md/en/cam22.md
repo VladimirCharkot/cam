@@ -5,9 +5,9 @@
 
 The _Argentinian Juggling Convention_ returns reloaded, and we're already planning, arranging and articulating so it's a reunion party.
 
-The scenario will be _Miramar de Ansenuza_, Córdoba, right next to the Mar Chiquita lagoon. There we'll be hosted by the _"La Escuelita" Cultural Space_. The date, _April 19th to 24th_.
+The scenario will be _Miramar de Ansenuza_, Córdoba, right next to the Mar Chiquita lagoon. There we'll be hosted by the _Camping Don Osvaldo_. The date, _April 19th to 24th_.
 
-Once again the convention's focus will be on education. **Seminar applications are open**. If you've got a proposal, [¡let us know!](#)
+Once again the convention's focus will be on education.
 
 This year we'll be collaborating with the [A-Nido Collective](https://colectivoanido.com) for the making of the educational program. We're looking forward to organize themed lines for the seminars (technique, research, scene, etc...)
 

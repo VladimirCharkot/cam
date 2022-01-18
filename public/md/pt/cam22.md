@@ -5,9 +5,9 @@ Mais uma vez o malabarismo nos encontra para uma semana de oficinas, seminários
 
 A _Convenção Argentina do Malabarismo_ volta com tudo, e já estamos planejando, administrando e articulando para torná-la uma festa de reencontro.
 
-O palco será _Miramar de Ansenuza_, Córdoba, próximo à lagoa Mar Chiquita. Lá estaremos acampando e morando no _Espaço Cultural "La Escuelita"_. A data, de _19 a 24 de abril_.
+O palco será _Miramar de Ansenuza_, Córdoba, próximo à lagoa Mar Chiquita. Lá estaremos acampando e morando no _Camping Don Osvaldo_. A data, de _19 a 24 de abril_.
 
-Mais uma vez, o foco do conve será o treinamento. **Está aberta a recepção de propostas de seminaristas**. Se você tiver uma proposta, [envie-a!](#)
+Mais uma vez, o foco do conve será o treinamento.
 
 Este ano estamos em coordenação com o [Coletivo A-Nido](https://colectivoanido.com) para a preparação do programa de treinamento. Procuramos organizar linhas de seminários articuladas por temas (técnica / cena / pesquisa / etc).
 
