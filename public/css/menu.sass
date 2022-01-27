@@ -5,10 +5,31 @@
 
   position: relative
   width: 100vw
+  height: 3em
+
   display: flex
-  flex-direction: row
-  align-items: center
+  // flex-direction: row
+  align-items: baseline
   justify-content: space-around
+
+  background: var(--color-menu)
+
+
+
+  div
+    position: relative
+    max-height: 3em
+    z-index: 1
+    background: var(--color-menu)
+    padding: 0 1em
+    overflow: hidden
+    &:hover
+      max-height: 50em
+      border-bottom: 2px solid black
+      .sep
+        height: 0
+        border-bottom: 2px solid #793a5d
+
 
   a
     display: block

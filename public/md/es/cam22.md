@@ -7,7 +7,7 @@ La _Convención Argentina de Malabares_ vuelve con todo, y ya estamos planifican
 
 El escenario será _Miramar de Ansenuza_, Córdoba, junto a la laguna Mar Chiquita. Allí estaremos acampando y habitando en el _Camping Don Osvaldo_. La fecha, del _19 al 24 de abril_.
 
-Una vez más el foco de conve va a estar puesto sobre la formación. 
+Una vez más el foco de conve va a estar puesto sobre la **formación**.
 
 Este año estamos en articulación con el [Colectivo A-Nido](https://colectivoanido.com) para la confección del programa de formación. Buscamos organizar líneas de seminarios articuladas por temáticas (técnica/escena/investigación/etc).
 

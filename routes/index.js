@@ -11,7 +11,9 @@ const redis = require("./redisclient")
 
 
 
-
+router.get('/seminarios', [logaccess, async (req, res) => {
+  res.render('lienzo')
+}])
 
 
 router.get('/:lang?/historia', [logaccess, lenguaje, async (req, res) => {
@@ -71,7 +73,7 @@ router.get('/:lang?/', [logaccess, lenguaje, async (req, res) => {
   let lang = req.params.lang
 
   let md_cam22 = await fs.readFile(`public/md/${lang}/cam22.md`, 'utf8')
-  let md_escuelita = await fs.readFile(`public/md/${lang}/la_escuelita.md`, 'utf8')
+  let md_escuelita = await fs.readFile(`public/md/${lang}/don_osvaldo.md`, 'utf8')
   let md_miramar = await fs.readFile(`public/md/${lang}/miramar.md`, 'utf8')
 
   res.render('index', {

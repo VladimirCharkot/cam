@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Arcos</title>
+</head>
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Inconsolata:wght@200;400&family=Montserrat:wght@400;500&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .sistema_anillos{
+      --x: 330px;
+      --y: 330px;
+      --s: 1;
+      transform: translate(var(--x), var(--y)) scale(var(--s));
+      transition: 0.3s;
+    }
+
+    .anillos{
+      transition: 1s cubic-bezier(0.87, 0, 0.13, 1);
+      transform: scale(0);
+    }
+
+    .taller.activo .anillos{
+      transform: scale(1);
+    }
+
+    .taller.activo .nucleo image{
+      fill: url(#gradiente);
+    }
+
+    .arco{
+      stroke: black;
+      stroke-width: 2px;
+    }
+
+
+    .giro{
+      animation: spin 6s linear infinite;
+    }
+
+
+
+    .marcador{
+      transition: 1s;
+      opacity: 0;
+      transform: translate(330px, 330px);
+    }
+
+    .taller.activo .marcador{
+      opacity: 1;
+    }
+
+    .marcador path{
+      stroke: #555;
+    }
+
+    .titulo{
+      font-size: 3em;
+      font-family: "Bebas Neue";
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translate(410px, 345px);
+    }
+
+    .tallerista{
+      font-size: 1.2em;
+      font-family: "Bebas Neue";
+      fill: #aaa;
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translate(540px, 80px);
+      opacity: 0;
+    }
+
+    .tallerista path{
+      stroke: #aaa;
+      z-index: -1;
+    }
+
+    .taller.activo .titulo{
+      transform: translate(540px, 120px);
+    }
+
+    .taller.activo .tallerista{
+      opacity: 1;
+    }
+
+    .texto{
+      --x: 0px;
+      --y: 0px;
+      font-family: "Inconsolata";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 350px;
+      opacity: 0;
+      transition: 1.6s;
+      transform: translate(calc(var(--x) + 560px), calc(var(--y) + 150px));
+    }
+
+    .texto.activo{
+      opacity: 1;
+    }
+
+    .foto{
+      transform: translate(810px, 50px);
+      opacity: 0.5;
+    }
+
+    .foto image{
+      --escala: 0.3;
+      background: url('/img/seminarios/seba.png');
+      background-size: 100%;
+      width: calc(var(--escala) * 484px);
+      height: calc(var(--escala) * 612px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .taller.activo .foto image{
+      filter: url(#glitch);
+      opacity: 1;
+    }
+
+    .nucleo{
+      cursor: pointer;
+    }
+
+    .nucleo image{
+      transform: translate(-50px, -50px);
+      width: 100px;
+      height: 100px;
+    }
+
+    @keyframes spin {
+        100% {
+            transform:rotate(360deg);
+        }
+    }
+  </style>
+  <svg>
+    <defs>
+
+    <!-- <radialGradient id="gradiente" cx="0.25" cy="0.25" r="0.25">
+      <stop offset="0%" stop-color="#B983FF"/>
+      <stop offset="20%" stop-color="#D69EFF"/>
+      <stop offset="40%" stop-color="#F3B9FF"/>
+      <stop offset="50%" stop-color="#FFD5FF"/>
+      <stop offset="60%" stop-color="#FFF2FF"/>
+      <stop offset="70%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </radialGradient> -->
+
+    <filter filterUnits="userSpaceOnUse" id="turbulencia" x="0" y="0" width="100%" height="100%">
+      <feTurbulence id="turbulencia_base" numOctaves="3" seed="2" baseFrequency="0.02 0.05"></feTurbulence>
+      <feDisplacementMap scale="20" in="SourceGraphic"></feDisplacementMap>
+    </filter>
+
+    <animate xlink:href="#turbulencia_base" attributeName="baseFrequency" dur="24s" keyTimes="0;0.5;1" values="0.01 0.02;0.02 0.03;0.01 0.03" repeatCount="indefinite"/>
+
+
+    <!-- GLITCH -->
+
+    <filter id="glitch">
+      <feFlood flood-color="black" result="black" />
+      <feFlood flood-color="red" result="flood1" />
+      <feFlood flood-color="limegreen" result="flood2" />
+      <feOffset in="SourceGraphic" dx="3" dy="0" result="off1a"/>
+      <feOffset in="SourceGraphic" dx="2" dy="0" result="off1b"/>
+      <feOffset in="SourceGraphic" dx="-3" dy="0" result="off2a"/>
+      <feOffset in="SourceGraphic" dx="-2" dy="0" result="off2b"/>
+      <feComposite in="flood1" in2="off1a" operator="in"  result="comp1" />
+      <feComposite in="flood2" in2="off2a" operator="in" result="comp2" />
+
+      <feMerge x="0" width="142px" result="merge1">
+      <feMergeNode in = "black" />
+      <feMergeNode in = "comp1" />
+      <feMergeNode in = "off1b" />
+
+      <animate
+        attributeName="y"
+          id = "y"
+          dur ="4s"
+          values = '104px; 104px; 30px; 105px; 30px; 2px; 2px; 50px; 40px; 105px; 105px; 20px; 6px; 40px; 104px; 40px; 70px; 10px; 30px; 104px; 102px'
+          keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
+          repeatCount = "indefinite" />
+
+      <animate attributeName="height"
+          id = "h"
+          dur ="4s"
+          values = '10px; 0px; 10px; 30px; 50px; 0px; 10px; 0px; 0px; 0px; 10px; 50px; 40px; 0px; 0px; 0px; 40px; 30px; 10px; 0px; 50px'
+          keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
+          repeatCount = "indefinite" />
+      </feMerge>
+
+
+    <feMerge x="0" width="142px" y="60px" height="65px" result="merge2">
+      <feMergeNode in = "black" />
+      <feMergeNode in = "comp2" />
+      <feMergeNode in = "off2b" />
+
+      <animate attributeName="y"
+          id = "y"
+          dur ="4s"
+          values = '103px; 104px; 69px; 53px; 42px; 104px; 78px; 89px; 96px; 100px; 67px; 50px; 96px; 66px; 88px; 42px; 13px; 100px; 100px; 104px;'
+          keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513; 0.548; 0.577; 0.613; 1'
+          repeatCount = "indefinite" />
+
+        <animate attributeName="height"
+          id = "h"
+          dur = "4s"
+          values = '0px; 0px; 0px; 16px; 16px; 12px; 12px; 0px; 0px; 5px; 10px; 22px; 33px; 11px; 0px; 0px; 10px'
+          keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513;  1'
+          repeatCount = "indefinite" />
+      </feMerge>
+
+      <feMerge>
+        <feMergeNode in="SourceGraphic" />
+        <feMergeNode in="merge1" />
+        <feMergeNode in="merge2" />
+      </feMerge>
+    </filter>
+
+    </defs>
+  </svg>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script>
+
+    let investigacion = {
+      titulo: 'Investigación',
+      tallerista: 'Seba Rojo',
+      icono: '/img/seminarios/ojo.svg',
+      foto: '/img/seminarios/seba.png',
+      colores: ["#655D8A", "#7897AB", "#D885A3", "#FDCEB9"],
+      coordenadas: {x: 0, y: 0},
+      texto: `El cotidiano todo, es un movimiento. Cada cosa -la respiración, el lanzamiento de una clava, el paso que doy cuando camino, y el que doy cuando tomo una decisión, y lo anterior a tomarla- todo, es en movimiento. Un diálogo es un movimiento. Cada lenguaje, - el gesto de una mano, el toque en una cuerda, un pincel que se desliza, el lanzamiento de un objeto- cada uno, es un movimiento. Y un movimiento es también lo que lo generó: el pensamiento, el recuerdo, la emoción, la sensación.
+      Otra cosa es la dirección que toma ese movimiento.`
+    }
+
+    let objeto_y_vinculo = {
+      titulo: 'Creación con clavas',
+      tallerista: 'Maite Fernandez',
+      icono: '/img/seminarios/clavas.svg',
+      foto: '/img/seminarios/maite.png',
+      colores: ["#B983FF", "#94B3FD", "#94DAFF", "#99FEFF"],
+      coordenadas: {x: 700, y: 400},
+      texto: `La propuesta se orienta por vaciar los cuerpos de sentido, abrirse a la experiencia sensoperceptiva a efectos de que ese estado desconocido permita que lleguen nuevos impulsos creativos a la hora de habitar el adentro / afuera de un cuerpo, el adentro / afuera de un espacio, el objeto o no objeto. No para someter la sensibilidad al servicio de la producción, o del sentido productivo. Al contrario, es una inversión, una subversión del sentido. El objetivo central será partir de técnicas y conceptos fijos, para ir borrando los límites de a poco y habitar el estado de improvisación consciente. De las categorías a la experiencia inclasificable. El intento: la proximidad al abismo de tiempo presente, o tiempo escénico, donde la ficción cobra vida, expresa y expande en el espacio aquello que la conmueve.`
+    }
+
+    let malabar_funcional = {
+      titulo: 'Malabar Funcional',
+      tallerista: 'Craig Quat',
+      icono: '/img/seminarios/funcional.svg',
+      foto: '/img/seminarios/craig.png',
+      colores: ["#22577E", "#5584AC", "#95D1CC", "#F6F2D4"],
+      coordenadas: {x: 900, y: -200},
+      texto: `Este curso representa la tan esperada llegada de una segunda edición del Seminario de Formación de Profesores de Malabares Funcionales. La idea de esta experiencia es crear un proceso de aprendizaje alternativo al del curso de formación de primera generación, fuertemente teorizado, que se impartió en el CAM2019, así como en cientos de otros eventos y festivales en todo el mundo. Esta experiencia de formación está diseñada para llevar a los estudiantes a través de un proceso de aprendizaje experimental y exploratorio, que guía las ideas detrás del proceso de creación del Malabarismo Funcional.`
+    }
+
+
+
+    let caracteres = 80
+    let width = 350
+    let wrap = (text) => {
+      // as in https://bl.ocks.org/mbostock/7555321
+      text.each(function () {
+          var text = d3.select(this),
+              words = text.text().split(/\s+/).reverse(),
+              word,
+              line = [],
+              lineNumber = 0,
+              lineHeight = 1.3, // ems
+              dy = 1,
+              tspan = text.text(null)
+                          .append("tspan")
+                          .attr("dy", dy + "em")
+          while (word = words.pop()) {
+              line.push(word)
+              tspan.text(line.join(" "))
+              if (tspan.node().getComputedTextLength() > width) {
+                  line.pop()
+                  tspan.text(line.join(" "))
+                  line = [word]
+                  tspan = text.append("tspan")
+                              .attr("x", 0)
+                              .attr("y", 0)
+                              .attr("dy", ++lineNumber * lineHeight + dy + "em")
+                              .text(word)
+              }
+          }
+      })
+    }
+
+    let arco = (i,o,s,e) => d3.arc()
+      .innerRadius(i)
+      .outerRadius(o)
+      .startAngle(s)
+      .endAngle(e)
+
+    let insertar = (g, d, c, t) => g.append("path")
+      .attr("class", "arco")
+      .attr("d", d)
+      .attr("fill", c)
+      .style("animation-duration", t)
+
+    let pi = Math.PI
+
+    let anillo = (n, diametro, espesor, color, t) => {
+      let theta = pi / n
+
+      let fragmentos = []
+      for(let d = 0; d < n; d++){
+
+        let lower_bound = (2 * d) * theta
+        let upper_bound = (2 * d + 1) * theta
+        let k = _.random(5) + 1
+
+        let lower = lower_bound
+        let random_delta = _.random(theta / (30 * k))
+        let upper = lower + theta / k + random_delta
+
+        for(let i = 1; i < k; i++){
+
+          fragmentos.push(arco(diametro, diametro + espesor, lower, upper))
+          lower = upper
+          random_delta = _.random(theta / (30 * k))
+          //upper += theta / k + random_delta
+          upper += i * theta / k + random_delta
+
+        }
+        fragmentos.push(arco(diametro, diametro + espesor, upper, upper_bound))
+
+      }
+
+      return g => _.flatten(fragmentos).map((d, i) => insertar(g, d, d3.color(color).brighter(_.random(0.7)), t))
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Visualización
+
+    const svg = d3.select("svg")
+    svg
+      .attr("width", "100vw")
+      .attr("height", "100vh")
+
+    let base = svg.append("g")
+
+    let zoomed = ({transform}) => {
+      base.attr("transform", transform)
+    }
+
+    let zoom = d3.zoom()
+      .scaleExtent([0.1, 5])
+      .on("zoom", zoomed);
+
+    svg.call(zoom)
+
+    // let drag =  d3.drag()
+    // .on('drag', (ev, d) => {
+    //   d.x = ev.x;
+    //   d.y = ev.y;
+    // })
+
+
+    // Sistema de anillos
+
+    let taller = (t) => {
+
+      let sistema_anillos = (g) => {
+
+        let ag = g.append("g")
+          .classed("sistema_anillos",true)
+
+        let anillos = ([c1, c2, c3, c4]) => {
+            ag.append("g").attr("class", "anillos")
+              .call(anillo(2, 80, 20,  c1, "8s"))
+              .call(anillo(3, 120, 30, c2, "12s"))
+              .call(anillo(3, 160, 10, c3, "24s"))
+              .call(anillo(3, 180, 20, c4, "30s"))
+          }
+
+
+        let nucleo = (icon) =>
+            ag.append("g")
+                .attr("class","nucleo")
+              .append("image")
+                .attr("href", icon)
+                .on("click", () => {
+                  if(g.classed("activo")) {
+                    g.classed("activo", false)
+                    g.select(".texto").classed("activo", false)
+                    setTimeout(() => g.selectAll(".arco").classed("giro", false), 400)
+                  }else{
+                   g.classed("activo", true)
+                   setTimeout(() => g.select(".texto").classed("activo", true), 700)
+                   setTimeout(() => g.selectAll(".arco").classed("giro", true), 100)
+                  }
+                })
+
+        anillos(t.colores)
+        nucleo(t.icono)
+      }
+
+
+
+      let g = base.append("g")
+        .classed("taller", true)
+        .attr('transform', `translate(${t.coordenadas.x},${t.coordenadas.y})`)
+        .call(sistema_anillos)
+
+
+
+      let marcador = g.append("g")
+          .attr("class", "marcador")
+      marcador.append("path")
+          .attr("d", arco(220, 223, 0, pi / 3)())
+          .attr("fill", "#555")
+      marcador.append("path")
+          .attr("d", d3.line()([[220 * Math.cos(pi / 4), -220 * Math.sin(pi / 4)], [200, -200], [400, -200]]))
+          .style("stroke-width", "3")
+          .attr("fill", "none")
+
+      let tallerista = g.append("g")
+          .attr("class", "tallerista")
+      tallerista.append("text")
+          .text(t.tallerista)
+          .attr("transform", `translate(0,-5)`)
+
+      let titulo = g.append("g")
+          .attr("class", "titulo")
+        .append("text")
+          .text(t.titulo)
+
+      let foto = g.append("g")
+          .classed("foto", true)
+        .append("image")
+          .attr("href", t.foto)
+
+      // let ds1 = tallerista.node().getBBox()
+      // let ds2 = foto.node().getBBox()
+      // // console.log([[ds1.width - 15, ds1.y + ds1.height/2],[ds.x + ds.width + 50, ds.y + ds.height/2]])
+      //
+      // function linea_gris(context){
+      //   context.fillStyle = "red";
+      //   context.moveTo(ds1.width - 15, ds1.y + ds1.height/2 - 2);
+      //   context.lineTo(810 , ds1.y + ds1.height/2 - 2);
+      //   context.closePath();
+      //   return context;
+      // }
+      //
+      // let linea = tallerista.append("path")
+      //   .attr("d", linea_gris(d3.path()))
+
+      let texto = g.append("text")
+        .text(t.texto)
+        .attr('class','texto')
+        .call(wrap)
+
+      // // Posicionar adecuadamente la div con el texto
+      // let texto = d3.select("body").append("div")
+      //     .classed("texto", true)
+      //     .html(t.texto)
+
+    }
+
+    taller(investigacion)
+    taller(objeto_y_vinculo)
+    taller(malabar_funcional)
+
+  </script>
+</body>
+</html>
