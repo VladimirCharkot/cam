@@ -1,6 +1,6 @@
 ## The place — Camping Don Osvaldo
 
-![La Escuelita front gate entrance](/img/artículos/donosvaldo.png)
+![La Escuelita front gate entrance](/img/artículos/donosvaldo.webp)
 
 Camping Don Osvaldo will be the one that this year receives the CAM together with all its participants. It is located just 200 meters from the Mar Chiquita lagoon and 15 minutes from the bus station in the city of Miramar. It is a property that has all the services to accommodate and contain large contingents of vacationers and massive events. Each plot has a 220 vlt connection, material table and chairs, barbecue, light at night and an important shade for camping. It also has two pools, a canteen, a barbecue area and bathrooms near the camping area. You can visit their [facebook page](https://www.facebook.com/Camping-Don-Osvaldo-205979423659659) to take a look.
 

@@ -1,6 +1,6 @@
 ## El lugar — Camping Don Osvaldo
 
-![Entrada de La Escuelita](/img/artículos/donosvaldo.png)
+![Entrada de La Escuelita](/img/artículos/donosvaldo.webp)
 
 El Camping Don Osvaldo será el que este año recibe a la CAM junto a todos sus participantes. Está ubicado a tan solo 200 metros de la laguna de Mar Chiquita y a 15 minutos de la Terminal de ómnibus de la ciudad de Miramar. Es un predio que cuenta con todos los servicios para alojar y contener a grandes contingentes de vacacionistas y eventos masivos. Cada Parcela cuenta con conexión a 220 vlt, mesa y sillas de material, asador, luz por la noche y una importante sombra para el acampe. Además cuenta con dos piletas, cantina, quincho y baños próximos a la zona de acampe. Pueden visitar su [página de facebook](https://www.facebook.com/Camping-Don-Osvaldo-205979423659659) para echarle un vistazo.
 

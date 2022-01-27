@@ -19,4 +19,4 @@ Nos cœurs bouillonnent de joie! Le _Conve_ est de retour!! Wooooo!
 
 On vous attend avec entrain!
 
-![Groupe d'atelier malabar fonctionnel CAM19](/img/artículos/funcional.jpg)
+![Groupe d'atelier malabar fonctionnel CAM19](/img/artículos/funcional.webp)

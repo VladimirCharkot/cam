@@ -19,4 +19,4 @@ Nossos corações pulam de alegria! CAM está de volta! Vaaaamooooo!
 
 Esperamos por você com entusiasmo e abraços multiplex
 
-![Grupo de oficina de malabarismo funcional do CAM19](/img/artículos/funcional.jpg)
+![Grupo de oficina de malabarismo funcional do CAM19](/img/artículos/funcional.webp)

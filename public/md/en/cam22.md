@@ -19,4 +19,4 @@ We'll let you know what's up on this side by means of our social media and this 
 
 We'll be waiting with zest
 
-![Functaional's juggling group at AJC19](/img/artículos/funcional.jpg)
+![Functaional's juggling group at AJC19](/img/artículos/funcional.webp)
