@@ -1,7 +1,0 @@
-rapportd    375           vlad    4u  IPv4 0x234b3695ce12cac1      0t0    TCP *:57260 (LISTEN)
-rapportd    375           vlad    5u  IPv6 0x234b3695c5d80071      0t0    TCP *:57260 (LISTEN)
-Spotify     488           vlad   38u  IPv4 0x234b3695ca7514a1      0t0    TCP *:57262 (LISTEN)
-Spotify     488           vlad   47u  IPv4 0x234b3695ce12c0e1      0t0    TCP *:57621 (LISTEN)
-Discord    8043           vlad   48u  IPv4 0x234b3695ca754601      0t0    TCP localhost:6463 (LISTEN)
-redis-ser 21586           vlad    6u  IPv4 0x234b3695ca752861      0t0    TCP *:6379 (LISTEN)
-redis-ser 21586           vlad    7u  IPv6 0x234b3695c5d7c331      0t0    TCP *:6379 (LISTEN)
