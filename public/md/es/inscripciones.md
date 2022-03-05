@@ -21,8 +21,8 @@ Postulate acá como artista-tallerista
 La inscripción como convencionista incluye el acceso al camping los siete días que dura el evento, y la entrada a talleres y espectáculos. Los seminarios se pagan a parte. La alimentación no está incluída y queda a gestión y criterio de cada quien.
 
 Los valores de las entradas varían según el período donde te inscribas:
-- 2 de marzo al 31 de marzo: $5.500
-- 1 de de abril en adelante: $6.500
+- 2 de marzo al 31 de marzo: **$5.500**
+- 1 de de abril en adelante: **$6.500**
 
 Una vez que te inscribís deberás abonar una parte de la entrada para congelar el precio de tu inscripción y el resto abonarlo posteriormente o incluso en la puerta de la convención (presentando el ticket del primer pago). Es **importante** que tengan en cuenta que el precio **NO SE CONGELA SOLO CON LA INSCRIPCIÓN, DEBEN ABONAR AL MENOS $1000**.
 
