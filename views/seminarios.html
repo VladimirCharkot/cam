@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" href="/img/logo19.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Arcos</title>
+  <title>CAM | Seminarios</title>
 </head>
 <body>
   <style>
@@ -13,6 +14,14 @@
     * {
       margin: 0;
       padding: 0;
+    }
+
+    svg{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
     }
 
     .sistema_anillos{
@@ -158,6 +167,7 @@
       top: 45vh;
       opacity: 0.5;
       cursor: pointer;
+      z-index: 1;
     }
 
     .flecha:hover{
@@ -174,9 +184,18 @@
       left: 0;
     }
 
+    .icon{
+      width: 10vw;
+      height: 10vh;
+      background-image: url(/img/logo19.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: 5vw;
+      z-index: 1;
+      position: fixed;
+    }
+
   </style>
-  <div class="flecha" id="izquierda"></div>
-  <div class="flecha" id="derecha"></div>
   <svg>
     <defs>
 
@@ -262,6 +281,13 @@
 
     </defs>
   </svg>
+
+
+  <a href="/"><div class="icon"></div></a>
+  <div class="flecha" id="izquierda"></div>
+  <div class="flecha" id="derecha"></div>
+
+
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
   <script>
@@ -270,7 +296,7 @@
       titulo: 'Creación con clavas',
       tallerista: 'Maite Fernandez',
       id: 'maite',
-      icono: '/img/seminarios/clavas.svg',
+      icono: '/img/seminarios/ojo.svg',
       foto: '/img/seminarios/maite.png',
       colores: ["#B983FF", "#94B3FD", "#94DAFF", "#99FEFF"],
       coordenadas: {x: -900, y: -250},
@@ -279,11 +305,11 @@
       titulo: 'La técnica de la técnica',
       tallerista: 'Nano Acosta',
       id: 'nano',
-      icono: '/img/seminarios/ojo.svg',
+      icono: '/img/seminarios/clavas.svg',
       foto: '/img/seminarios/nano.jpg',
       colores: ["#655D8A", "#7897AB", "#D885A3", "#FDCEB9"],
       coordenadas: {x: 0, y: 0},
-      texto: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
+      texto: `¿Qué es la técnica? ¿Se puede entrenar la técnica? ¿Es indispensable la técnica para avanzar con nuestro malabar? ¿A qué podemos llegar entrenando solo la técnica? ¿Hay momentos adecuados para entrenar? ¿Cada vez que agarro los malabares, estoy entrenando? ¿Existe lo difícil? ¿Por qué pensamos que algo es difícil? ¿Cuándo creemos que la técnica la tenemos resuelta? En este seminario, “la técnica de la técnica” nos centraremos en responder las preguntas que se encuentran allí arriba. La “técnica de la técnica” está destinado a aquellxs que quieran avanzar y entender cómo manejar el cuerpo para optimizar el momento del entrenamiento, cómo trabajar la mente, y sobre todo, está destinado a los seres que quieran avanzar con la técnica de sus malabares.`
     },{
       titulo: 'Malabar Funcional',
       tallerista: 'Craig Quat',
@@ -298,7 +324,7 @@
       titulo: 'Cuerpo expresivo',
       tallerista: 'Luciano Roggero',
       id: 'luciano',
-      icono: '/img/seminarios/máscara.svg',
+      icono: '/img/seminarios/mascara.svg',
       foto: '/img/seminarios/luciano.jpg',
       colores: ["#EEE6CE", "#2EB086", "#B8405E", "#313552"],
       coordenadas: {x: 1700, y: 100},
@@ -424,9 +450,7 @@
     // Visualización
 
     const svg = d3.select("svg")
-    svg
-      .attr("width", "100vw")
-      .attr("height", "100vh")
+
 
     let base = svg.append("g")
 

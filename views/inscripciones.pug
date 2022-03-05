@@ -1,0 +1,5 @@
+extends layout
+
+block contenido
+  for articulo in articulos
+    .articulo(id=articulo.id)!=articulo.contenido

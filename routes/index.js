@@ -1,9 +1,14 @@
 const express = require('express')
 const md = require('markdown-it')()
+const emoji = require('markdown-it-emoji');
+const attrs = require('markdown-it-attrs');
 const fs = require('fs/promises')
 const _ = require('lodash')
 const tg = require('./tg')
 const router = express.Router()
+
+md.use(emoji)
+md.use(attrs)
 
 const { logaccess, lenguaje } = require('./middle')
 
@@ -11,8 +16,29 @@ const redis = require("./redisclient")
 
 
 
-router.get('/seminarios', [logaccess, async (req, res) => {
-  res.render('lienzo')
+router.get('/:lang/seminarios', [logaccess, async (req, res) => {
+  res.render('seminarios')
+}])
+
+router.get('/:lang/inscripciones', [logaccess, async (req, res) => {
+  let titulos = {
+    es: 'CAM22 — Inscripciones',
+    en: 'AJC22 — Registrations',
+    fr: 'CAJ22 — Inscriptions',
+    pt: 'CAM22 — Inscrições',
+  }
+
+  let lang = req.params.lang
+  let inscripciones = await fs.readFile(`public/md/${lang}/inscripciones.md`, 'utf8')
+
+  res.render('inscripciones', {
+    titulo: titulos[lang],
+    lang: lang,
+    celu: req.useragent.isMobile,
+    articulos: [
+      {id: 'inscripciones', contenido: md.render(inscripciones)}
+    ]
+  })
 }])
 
 

@@ -1,19 +1,26 @@
 .menu
-  if lang == "es"
-    a(href=`/${lang}/`) CAM22
-    a(href=`/${lang}/historia`) Historia
-    a(href=`/${lang}/orga`) Organización
-    a(href=`/${lang}/contacto`) Contacto
   //- if lang == "es"
-  //-   div
-  //-     a(href=`/${lang}/`) CAM22
-  //-     .sep
-  //-     a(href=`/${lang}/`) Inscripcion
-  //-     a(href=`/${lang}/`) Seminarios
-  //-     a(href=`/${lang}/`) Talleres
+  //-   a(href=`/${lang}/`) CAM22
   //-   a(href=`/${lang}/historia`) Historia
   //-   a(href=`/${lang}/orga`) Organización
   //-   a(href=`/${lang}/contacto`) Contacto
+  if lang == "es"
+    a(href=`/${lang}/`) Portada
+    div
+      a(href=`#`) CAM22
+      .sep
+      a(href=`/${lang}/inscripciones`) Inscripciones
+      //- a(href=`/${lang}/seminarios`) Seminarios
+      //- a(href=`/${lang}/`) Talleres
+    div
+      a(href=`#`) Organización
+      .sep
+      //a(href=`/${lang}/conve`) La conve
+      a(href=`/${lang}/historia`) Historia
+      a(href=`/${lang}/orga`) Equipo
+      a(href=`/${lang}/contacto`) Contacto
+    
+    
   if lang == "en"
     a(href=`/${lang}/`) AJC22
     a(href=`/${lang}/historia`) History

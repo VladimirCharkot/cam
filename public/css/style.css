@@ -188,20 +188,35 @@ body {
 .custom-shape-divider-top-1634244157 path:nth-of-type(2) {
   fill: var(--color-comp-2); }
 
-.articulo h2, .articulo h3, #contacto h2 {
+.articulo h1, .articulo h2, .articulo h3, #contacto h2 {
   color: var(--color-menu); }
 
 .menu {
   font-family: 'Lulo';
   position: relative;
   width: 100vw;
+  height: 3em;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around; }
-  .menu a {
-    display: block;
+  align-items: baseline;
+  justify-content: space-around;
+  background: var(--color-menu); }
+  .menu div {
     flex-grow: 1;
+    position: relative;
+    max-height: 3em;
+    z-index: 1;
+    background: var(--color-menu);
+    padding: 0 1em;
+    overflow: hidden; }
+    .menu div:hover {
+      max-height: 50em;
+      border-bottom: 2px solid black; }
+      .menu div:hover .sep {
+        height: 0;
+        border-bottom: 2px solid #793a5d; }
+  .menu a {
+    flex-grow: 1;
+    display: block;
     text-align: center;
     padding: 1em 0;
     transition: 0.2s; }
@@ -220,6 +235,12 @@ body {
   position: relative;
   padding: 0 10vw;
   margin-top: 5em; }
+  .articulo h1 {
+    margin-top: 2em;
+    text-align: center;
+    font-weight: 400;
+    font-size: 2.5em;
+    font-family: 'Lulo'; }
   .articulo h2 {
     margin-top: 2em;
     text-align: center;
@@ -253,6 +274,32 @@ hr {
 .reversa {
   transform: scaleX(-1);
   display: inline-block; }
+
+#inscripciones ul p {
+  padding: 0; }
+
+#inscripciones .btn {
+  letter-spacing: 8px;
+  font-size: 2em;
+  padding: 0.3em;
+  margin: 1em;
+  background: #8c4d70;
+  border-radius: 10px;
+  border-bottom: 4px solid #000;
+  border-right: 4px solid #000;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  margin: 0vh 20vw;
+  margin-bottom: 10vh;
+  text-align: center; }
+  #inscripciones .btn a {
+    color: #FFF5E9; }
+  #inscripciones .btn:hover a {
+    color: #98C3F0; }
+
+@media only screen and (max-width: 800px) {
+  #inscripciones .btn {
+    margin: 0vh 5vw; } }
 
 .redes {
   height: 30vh;
@@ -486,7 +533,7 @@ body {
 .custom-shape-divider-top-1634244157 path:nth-of-type(2) {
   fill: var(--color-comp-2); }
 
-.articulo h2, .articulo h3, #contacto h2 {
+.articulo h1, .articulo h2, .articulo h3, #contacto h2 {
   color: var(--color-menu); }
 
 .custom-shape-divider-top-1634214673 {
