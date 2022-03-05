@@ -275,6 +275,9 @@ hr {
   transform: scaleX(-1);
   display: inline-block; }
 
+#inscripciones h2 {
+  font-size: 1.65em; }
+
 #inscripciones ul p {
   padding: 0; }
 
