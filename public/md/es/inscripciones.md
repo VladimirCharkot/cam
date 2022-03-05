@@ -47,8 +47,15 @@ Inscribite acá como convencionista:
 
 - Tarjeta de crédito :argentina:
   ```
-  Solicita tu link de Mercado pago por whatsapp al +5493564474056 o por el formulario de contacto de este sitio web y abonás en la cantidad de cuotas que elijas.
-  Esta opción tiene un recargo de 500 pesos al precio original de la CAM en cualquiera de las etapas de promoción.
+  Solicita tu link de Mercado pago
+  por whatsapp al +5493564474056
+  o por el formulario de contacto
+  de este sitio web y abonás en la
+  cantidad de cuotas que elijas.
+  Esta opción tiene un recargo de
+  500 pesos al precio original de
+  la CAM en cualquiera de las
+  etapas de promoción.
   ```
 
 - Banco Nación :argentina:
