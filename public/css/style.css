@@ -278,8 +278,14 @@ hr {
 #inscripciones h2 {
   font-size: 1.65em; }
 
-#inscripciones ul p {
-  padding: 0; }
+#inscripciones ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  #inscripciones ul li {
+    margin: 1.5em; }
+  #inscripciones ul p {
+    padding: 0; }
 
 #inscripciones .btn {
   letter-spacing: 8px;
@@ -299,6 +305,9 @@ hr {
     color: #FFF5E9; }
   #inscripciones .btn:hover a {
     color: #98C3F0; }
+
+#inscripciones .jesus img {
+  display: none; }
 
 @media only screen and (max-width: 800px) {
   #inscripciones .btn {

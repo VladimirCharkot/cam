@@ -1,5 +1,7 @@
 extends layout
 
 block contenido
+  script.
+    addEventListener('keypress', (e) => {if(e.key=='j') document.querySelector('.jesus img').style.display = 'block'})
   for articulo in articulos
     .articulo(id=articulo.id)!=articulo.contenido

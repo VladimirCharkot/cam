@@ -50,8 +50,14 @@ hr
   h2
     font-size: 1.65em
 
-  ul p
-    padding: 0
+  ul
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    li
+      margin: 1.5em
+    p
+      padding: 0
 
   .btn
     letter-spacing: 8px
@@ -75,7 +81,8 @@ hr
     &:hover
       a
         color: #98C3F0
-
+  .jesus img
+    display: none
 
 @media only screen and (max-width: 800px)
   #inscripciones
