@@ -70,6 +70,8 @@ Una vez que te inscribís deberás abonar una parte de la entrada para congelar 
 
 **Una vez que realices el pago en, cualquiera de las opciones, no olvides conservar el comprobante y enviarlo por: Correo electrónico, whatsapp, telegram, facebook o instagram.**
 
+¡Tenemos cupo limitado! ¡No te duermas!
+
 ¡Muchas gracias y bienvenide a la CAM22!
 
 Inscribite acá como convencionista:
