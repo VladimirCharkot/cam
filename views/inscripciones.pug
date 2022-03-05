@@ -2,6 +2,12 @@ extends layout
 
 block contenido
   script.
-    addEventListener('keypress', (e) => {if(e.key=='j') document.querySelector('.jesus img').style.display = 'block'})
+    addEventListener('keypress', (e) => {
+      if(e.key=='j') document.querySelector('.jesus').style.display = 'block';
+      let audio = new Audio('/video/Noches-de-Miramar.mp3');
+      audio.volume = 0.3;
+      audio.play();
+      })
+    
   for articulo in articulos
     .articulo(id=articulo.id)!=articulo.contenido

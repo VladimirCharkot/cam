@@ -306,7 +306,7 @@ hr {
   #inscripciones .btn:hover a {
     color: #98C3F0; }
 
-#inscripciones .jesus img {
+#inscripciones .jesus {
   display: none; }
 
 @media only screen and (max-width: 800px) {
