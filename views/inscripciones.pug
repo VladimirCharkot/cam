@@ -4,9 +4,12 @@ block contenido
   script.
     addEventListener('keypress', (e) => {
       if(e.key=='j') document.querySelector('.jesus').style.display = 'block';
-      let audio = new Audio('/video/Noches-de-Miramar.mp3');
-      audio.volume = 0.3;
-      audio.play();
+      if(!Object.keys(window).includes('sonando')){
+        let audio = new Audio('/video/Noches-de-Miramar.mp3');
+        audio.volume = 0.3;
+        audio.play();
+        window.sonando = true;
+      }
       })
     
   for articulo in articulos
