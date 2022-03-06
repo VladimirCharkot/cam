@@ -19,4 +19,4 @@ Iremos informando lo que vaya sucediendo de este lado por nuestras redes y por e
 
 Les esperamos con entusiasmo y abrazos multiplex
 
-![Grupo taller malabar funcional CAM19](/img/artículos/funcional.webp)
+![Ilustración flamenco frente a laguna](/img/flyer.png)

@@ -28,7 +28,7 @@ Una vez que te inscribís deberás abonar una parte de la entrada para congelar 
   CUIT/CUIL: 23311577409
   ```
 
-- Tarjeta de crédito :argentina:
+- Tarjeta de crédito :argentina: :bolivia: :chile: :uruguay: :paraguay: :venezuela: :brazil: :es: :fr: :uk:
   ```
   Solicita tu link de Mercado pago
   por whatsapp al +5493564474056
