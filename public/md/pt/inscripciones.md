@@ -93,4 +93,4 @@ Candidate-se aqui como artista-oficina
 { .btn }
 
 ![Jesus](/img/icon/dancing-jesus.gif)
-{.Jesus}
+{.jesus}

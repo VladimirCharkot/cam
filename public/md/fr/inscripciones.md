@@ -93,4 +93,4 @@ Postulez ici en tant qu'artiste-atelier
 { .btn }
 
 ![Jésus](/img/icon/dancing-jesus.gif)
-{.Jésus}
+{.jesus}

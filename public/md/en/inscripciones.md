@@ -93,4 +93,4 @@ Apply here as an artist-workshop
 { .btn }
 
 ![Jesus](/img/icon/dancing-jesus.gif)
-{.Jesus}
+{.jesus}
