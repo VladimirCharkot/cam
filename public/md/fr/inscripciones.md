@@ -13,7 +13,7 @@ L'inscription en tant que participant comprend l'accès au camping pendant les s
 
 Les valeurs des tickets varient selon la période où vous vous inscrivez :
 - 2 mars au 31 mars : **5500 $ ARS**
-- À partir du 1er avril : ** 6500 $ ARS**
+- À partir du 1er avril : **6500 $ ARS**
 
 Une fois inscrit vous devez payer une partie du billet pour figer le prix de votre inscription et payer le reste plus tard ou même à la porte de la convention (en présentant le premier billet de paiement). Il est ** important ** que vous teniez compte du fait que le prix ** N'EST PAS GELÉ UNIQUEMENT AVEC L'INSCRIPTION, VOUS DEVEZ PAYER AU MOINS 1 000 $ ARS **.
 
