@@ -22,20 +22,52 @@
     
     
   if lang == "en"
-    a(href=`/${lang}/`) AJC22
-    a(href=`/${lang}/historia`) History
-    a(href=`/${lang}/orga`) Organization
-    a(href=`/${lang}/contacto`) Contact us
+    a(href=`/${lang}/`) Welcome
+    div
+      a(href=`#`) AJC22
+      .sep
+      a(href=`/${lang}/inscripciones`) Registration
+      //- a(href=`/${lang}/seminarios`) Seminarios
+      //- a(href=`/${lang}/`) Talleres
+    div
+      a(href=`#`) Organization
+      .sep
+      //a(href=`/${lang}/conve`) La conve
+      a(href=`/${lang}/historia`) History
+      a(href=`/${lang}/orga`) Team
+      a(href=`/${lang}/contacto`) Contact us
+    
   if lang == "fr"
-    a(href=`/${lang}/`) CAJ22
-    a(href=`/${lang}/historia`) Histoire
-    a(href=`/${lang}/orga`) Organisation
-    a(href=`/${lang}/contacto`) Contacter
+    a(href=`/${lang}/`) Bienvenue
+    div
+      a(href=`#`) CAJ22
+      .sep
+      a(href=`/${lang}/inscripciones`) Inscriptions
+      //- a(href=`/${lang}/seminarios`) Seminarios
+      //- a(href=`/${lang}/`) Talleres
+    div
+      a(href=`#`) Organisation
+      .sep
+      //a(href=`/${lang}/conve`) La conve
+      a(href=`/${lang}/historia`) Histoire
+      a(href=`/${lang}/orga`) Équipe
+      a(href=`/${lang}/contacto`) Contactez-nous
+    
   if lang == "pt"
-    a(href=`/${lang}/`) CAM22
-    a(href=`/${lang}/historia`) História
-    a(href=`/${lang}/orga`) Organização
-    a(href=`/${lang}/contacto`) Contate-nos
+    a(href=`/${lang}/`) Casa
+    div
+      a(href=`#`) CAM22
+      .sep
+      a(href=`/${lang}/inscripciones`) Cadastro
+      //- a(href=`/${lang}/seminarios`) Seminarios
+      //- a(href=`/${lang}/`) Talleres
+    div
+      a(href=`#`) Organização
+      .sep
+      //a(href=`/${lang}/conve`) La conve
+      a(href=`/${lang}/historia`) História
+      a(href=`/${lang}/orga`) Equipe
+      a(href=`/${lang}/contacto`) Contate-Nos
     
 div(style="position: relative")
   div(class="custom-shape-divider-top-1634244157")
