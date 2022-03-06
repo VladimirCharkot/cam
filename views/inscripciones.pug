@@ -2,6 +2,7 @@ extends layout
 
 block contenido
   script.
+    addEventListener('load', () => document.querySelector('.jesus').style.display = 'none');
     addEventListener('keypress', (e) => {
       if(e.key=='j') document.querySelector('.jesus').style.display = 'block';
       if(!Object.keys(window).includes('sonando')){
