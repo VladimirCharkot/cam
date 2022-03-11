@@ -119,29 +119,41 @@ html {
       position: absolute;
       bottom: 5vh;
       right: 3vw; }
-    #portada #telon #convocatoria {
-      width: calc(1.8 * 12.20vw);
-      height: calc(1.8 * 4.32vw);
-      background-image: url(/img/convocatoria.png);
-      background-size: contain;
-      background-repeat: no-repeat;
+    #portada #telon .link {
       position: absolute;
-      bottom: 10vh;
-      right: 26vw;
+      right: 0;
+      margin: 5em;
+      font-family: 'Lulo';
+      color: white;
+      width: 15em;
+      text-align: center;
+      background: #3abff054;
+      background-image: url(/img/waves.svg);
+      background-size: 200%;
+      border: 3px solid black;
+      border-radius: 10px;
+      transform: rotate(15deg);
       animation-duration: 1s;
       animation-name: grandir;
-      animation-delay: 2s;
       animation-timing-function: ease-in-out;
       animation-direction: alternate;
       animation-iteration-count: 80; }
+    #portada #telon #inscripciones {
+      background: #3abff054;
+      animation-delay: 2s;
+      top: 10vh; }
+    #portada #telon #postulaciones {
+      background: #44af579c;
+      animation-delay: 3s;
+      top: 30vh; }
 
 @keyframes grandir {
   0%  {
-    transform: scale(1); }
+    transform: rotate(5deg) scale(1); }
   80%  {
-    transform: scale(1); }
+    transform: rotate(10deg) scale(1); }
   100% {
-    transform: scale(1.2); } }
+    transform: rotate(15deg) scale(1.2); } }
 
 @keyframes flotar {
   from {
@@ -276,19 +288,22 @@ hr {
   transform: scaleX(-1);
   display: inline-block; }
 
-#inscripciones h2 {
+#inscripciones strong, #postulaciones strong {
+  font-size: 1.2em; }
+
+#inscripciones h2, #postulaciones h2 {
   font-size: 1.65em; }
 
-#inscripciones ul {
+#inscripciones ul, #postulaciones ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; }
-  #inscripciones ul li {
+  #inscripciones ul li, #postulaciones ul li {
     margin: 1.5em; }
-  #inscripciones ul p {
+  #inscripciones ul p, #postulaciones ul p {
     padding: 0; }
 
-#inscripciones .btn {
+#inscripciones .btn, #postulaciones .btn {
   letter-spacing: 8px;
   font-size: 2em;
   padding: 0.3em;
@@ -302,12 +317,12 @@ hr {
   margin: 0vh 20vw;
   margin-bottom: 10vh;
   text-align: center; }
-  #inscripciones .btn a {
+  #inscripciones .btn a, #postulaciones .btn a {
     color: #FFF5E9; }
-  #inscripciones .btn:hover a {
+  #inscripciones .btn:hover a, #postulaciones .btn:hover a {
     color: #98C3F0; }
 
-#inscripciones .jesus {
+#inscripciones .jesus, #postulaciones .jesus {
   display: none; }
 
 @media only screen and (max-width: 800px) {
@@ -610,7 +625,7 @@ body {
     background-size: cover;
     background-position: center;
     background-color: #33a8d0;
-    background-blend-mode: luminosity;
+    background-blend-mode: none;
     transition: 1s; }
     #talleres .taller div p {
       opacity: 0;

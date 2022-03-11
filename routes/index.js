@@ -49,6 +49,27 @@ router.get('/:lang/inscripciones', [logaccess, async (req, res) => {
   })
 }])
 
+router.get('/:lang/postulaciones', [logaccess, async (req, res) => {
+  let titulos = {
+    es: 'CAM22 — Postulaciones',
+    en: 'AJC22 — Applications',
+    fr: 'CAJ22 — Postulation',
+    pt: 'CAM22 — Postulação',
+  }
+
+  let lang = req.params.lang
+  let postulaciones = await fs.readFile(`public/md/${lang}/postulaciones.md`, 'utf8')
+
+  res.render('inscripciones', {
+    titulo: titulos[lang],
+    lang: lang,
+    celu: req.useragent.isMobile,
+    articulos: [
+      {id: 'postulaciones', contenido: md.render(postulaciones)}
+    ]
+  })
+}])
+
 
 router.get('/:lang?/historia', [logaccess, lenguaje, async (req, res) => {
 

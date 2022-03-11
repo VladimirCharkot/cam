@@ -1,13 +1,4 @@
-# Inscription et candidatures
-
-Les inscriptions sont ouvertes ! 🎉
-
-Nous inscrivons à la fois des artistes/séminaires et des congressistes. Ci-dessous, nous vous donnons les détails de chaque profil.
-
-
----
-
-## Conventionnistes
+# Inscription
 
 L'inscription en tant que participant comprend l'accès au camping pendant les six jours que dure l'événement + la possibilité d'arriver la veille et de repartir le lendemain, et l'accès aux ateliers et spectacles. Les séminaires sont payés séparément. La nourriture n'est pas incluse et est laissée à la gestion et à la discrétion de chacun. Le camping qui nous accueille propose un service de buffet avec une option végétarienne.
 
@@ -80,17 +71,6 @@ Inscrivez-vous ici en tant que conventionniste :
 { .btn }
 
 ---
-
-## Ateliers - Artistes
-
-Cette année, la proposition de la convention est d'ouvrir les candidatures aux personnes qui souhaitent **présenter sur scène et donner un atelier**. Ceux qui postulent et entrent dans la sélection par ce parcours bénéficieront d'une entrée à prix réduit, d'un dîner le soir de leur représentation et d'une collation à l'occasion de leur atelier.
-
-Vous avez le temps de postuler jusqu'au 31 mars !
-
-Postulez ici en tant qu'artiste-atelier
-
-[CANDIDATER](https://forms.gle/CXaKRhWorK85N4QQ6)
-{ .btn }
 
 ![Jésus](/img/icon/dancing-jesus.gif)
 {.jesus}

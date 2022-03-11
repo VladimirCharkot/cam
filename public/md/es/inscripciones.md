@@ -1,13 +1,4 @@
-# Inscripciones y postulaciones
-
-¡Están abiertas las inscripciones! 🎉
-
-Estamos inscribiendo tanto artistas / seminaristas como convencionistas. A continuación te contamos los detalles de cada perfil.
-
-
----
-
-## Convencionistas
+# Inscripciones
 
 La inscripción como convencionista incluye el acceso al camping los seis días que dura el evento + la posibilidad de llegar un día antes y retirarse un día después, y la entrada a talleres y espectáculos. Los seminarios se pagan a parte. La alimentación no está incluída y queda a gestión y criterio de cada quien. El campingo que nos recibe tiene servicio de buffet con opción vegetariana.
 
@@ -80,17 +71,6 @@ Inscribite acá como convencionista:
 { .btn }
 
 ---
-
-## Talleristas - Artistas
-
-Este año la propuesta de la conve es abrir postulaciones a personas que estén dispuestas a **presentar en escena y dar taller**. Quienes se postulen y entren en la selección por esta vía tendrán la entrada bonificada, una cena la noche de su actuación y un refrigerio en ocasión de su taller.
-
-¡Tenés tiempo para postular hasta el 31 de marzo!
-
-Postulate acá como artista-tallerista
-
-[POSTULARME](https://forms.gle/CXaKRhWorK85N4QQ6)
-{ .btn }
 
 ![Jesús](/img/icon/dancing-jesus.gif)
 {.jesus}

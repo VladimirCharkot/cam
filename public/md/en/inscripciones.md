@@ -1,19 +1,14 @@
-# Registration and applications
-
-Registrations are open! 🎉
-
-We are enrolling both artists/seminarians and convention attendees. Below we tell you the details of each profile.
-
-
----
-
-## Conventionists
+# Registrations
 
 Registration as attendee includes access to the campsite for the six days that the event lasts + the possibility of arriving the day before and leaving the day after, and admission to workshops and shows. Seminars are paid separately. Food is not included and is left to the management and discretion of each person. The campsite that welcomes us has a buffet service with a vegetarian option.
 
 The values ​​of the tickets vary according to the period where you register:
+
 - March 2 to March 31: **ARS$5,500**
+{.grande}
+
 - April 1 onwards: **ARS$6,500**
+{.grande}
 
 Once you register you must pay part of the ticket to freeze the price of your registration and pay the rest later or even at the door of the convention (by presenting the first payment ticket). It is **important** that you take into account that the price **NOT FROZEN ONLY WITH REGISTRATION, YOU MUST PAY AT LEAST ARS$1000**.
 
@@ -80,17 +75,6 @@ Register here as a conventionist:
 { .btn }
 
 ---
-
-## Workshops - Artists
-
-This year the conve's proposal is to open applications to people who are willing to **present on stage and give a workshop**. Those who apply and enter the selection through this route will have discounted admission, a dinner the night of their performance and a snack on the occasion of their workshop.
-
-You have time to apply until March 31!
-
-Apply here as an artist-workshop
-
-[APPLICATE](https://forms.gle/CXaKRhWorK85N4QQ6)
-{ .btn }
 
 ![Jesus](/img/icon/dancing-jesus.gif)
 {.jesus}

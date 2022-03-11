@@ -129,29 +129,59 @@ html
       bottom: 5vh
       right: 3vw
 
-    #convocatoria
-      width: calc(1.8 * 12.20vw)
-      height: calc(1.8 * 4.32vw)
-      background-image: url(/img/convocatoria.png)
-      background-size: contain
-      background-repeat: no-repeat
+    // #convocatoria
+    //   width: calc(1.8 * 12.20vw)
+    //   height: calc(1.8 * 4.32vw)
+    //   background-image: url(/img/convocatoria.png)
+    //   background-size: contain
+    //   background-repeat: no-repeat
+    //   position: absolute
+    //   bottom: 10vh
+    //   right: 26vw
+    //   animation-duration: 1s
+    //   animation-name: grandir
+    //   animation-delay: 2s
+    //   animation-timing-function: ease-in-out
+    //   animation-direction: alternate
+    //   animation-iteration-count: 80
+
+    .link
       position: absolute
-      bottom: 10vh
-      right: 26vw
+      right: 0
+      margin: 5em
+      font-family: 'Lulo'
+      color: white
+      width: 15em
+      text-align: center
+      background: #3abff054
+      background-image: url(/img/waves.svg)
+      background-size: 200%
+      border: 3px solid black
+      border-radius: 10px
+      transform: rotate(15deg)
       animation-duration: 1s
       animation-name: grandir
-      animation-delay: 2s
       animation-timing-function: ease-in-out
       animation-direction: alternate
       animation-iteration-count: 80
 
+    #inscripciones
+      background: #3abff054
+      animation-delay: 2s
+      top: 10vh
+
+    #postulaciones
+      background: #44af579c
+      animation-delay: 3s
+      top: 30vh
+
 @keyframes grandir
   0% 
-    transform: scale(1)
+    transform: rotate(5deg) scale(1)
   80% 
-    transform: scale(1)
+    transform: rotate(10deg) scale(1)
   100%
-    transform: scale(1.2)
+    transform: rotate(15deg) scale(1.2)
 
 @keyframes flotar
   from

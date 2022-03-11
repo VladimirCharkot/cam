@@ -1,13 +1,4 @@
-# Inscrições e aplicações
-
-As inscrições estão abertas! 🎉
-
-Estamos inscrevendo artistas/seminaristas e participantes da convenção. Abaixo contamos os detalhes de cada perfil.
-
-
----
-
-## Convencionistas
+# Inscrições
 
 A inscrição como participante inclui o acesso ao parque de campismo durante os seis dias de duração do evento + a possibilidade de chegar no dia anterior e sair no dia seguinte, e entrada em workshops e espetáculos. Os seminários são pagos à parte. A alimentação não está incluída e é deixada à gestão e discrição de cada pessoa. O parque de campismo que nos recebe dispõe de serviço de buffet com opção vegetariana.
 
@@ -80,17 +71,6 @@ Registre-se aqui como um congressista:
 { .btn }
 
 ---
-
-## Workshops - Artistas
-
-Este ano, a proposta da convenção é abrir inscrições para pessoas que queiram **se apresentar no palco e dar um workshop**. Aqueles que se inscreverem e entrarem na seleção por esta rota terão entrada com desconto, um jantar na noite da sua atuação e um lanche por ocasião do seu workshop.
-
-Você tem tempo para se inscrever até 31 de março!
-
-Candidate-se aqui como artista-oficina
-
-[APLICAR](https://forms.gle/CXaKRhWorK85N4QQ6)
-{ .btn }
 
 ![Jesus](/img/icon/dancing-jesus.gif)
 {.jesus}
