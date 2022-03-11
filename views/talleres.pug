@@ -54,7 +54,12 @@ block contenido
         descripcion: "Entrá sin devilstick, salí con tu propio juguete, trucos y la técnica para seguir creando.", 
         pic: "/img/talleres/alejandra.jpg"
       },
-      
+      {
+        taller: "Antipodismo", 
+        docente: "Rocío Contreras", 
+        descripcion: "Explorar la manipulación de objetos con los pies y por el suelo, agregarle un condimento a su malabar, o saber de qué se trata el antipodismo… Técnica, exploración, movimiento y creación de secuencias.", 
+        pic: "/img/talleres/rocio.jpg"
+      },
       {
         taller: "Pirofagia, seguridad y manipulación con fuego", 
         docente: "Brenda Corso", 
@@ -81,12 +86,17 @@ block contenido
         pic: "/img/talleres/emi.jpg"
       },
       {
+        taller: "Hula", 
+        docente: "Reina Ruben Ungar Huichacura", 
+        descripcion: "Taller de Hula Hoops. Entrenamiento de resistencia. Movimientos en distintos ritmos. Desplazamientos. Lanzamientos. Recibimientos. Secuencias monohoops. Final Exposición de lo compartido en el taller. ", 
+        pic: "/img/talleres/reina.jpg"
+      },
+      {
         taller: "Swing y manipulación con objetos de flujo", 
         docente: "Joaco Alvarez (Niño Poi)", 
         descripcion: "Diferentes estilos de juego: anti-spin, no beat, body tracers, contacto, cat eyes y aislamientos, con sus distintos niveles de dificultad mas un modelo de exploración a través de las bases del swing.", 
         pic: "/img/talleres/joaco.jpg"
       },
-      
       {
         taller: "Práctica de movimiento con objetos", 
         docente: "Ignacio García", 
@@ -99,19 +109,6 @@ block contenido
         docente: "Pablo Brun", 
         descripcion: "El malabarismo de rebote es la técnica que invierte las reglas mas básicas de la física, jugando con ellas y multiplicando las posibilidades técnicas y creativas en el momento de malabarear.", 
         pic: "/img/talleres/pablo_rebote.jpg"
-      },
-      
-      {
-        taller: "Hula", 
-        docente: "Reina Ruben Ungar Huichacura", 
-        descripcion: "Taller de Hula Hoops. Entrenamiento de resistencia. Movimientos en distintos ritmos. Desplazamientos. Lanzamientos. Recibimientos. Secuencias monohoops. Final Exposición de lo compartido en el taller. ", 
-        pic: "/img/talleres/reina.jpg"
-      },
-      {
-        taller: "Antipodismo", 
-        docente: "Rocío Contreras", 
-        descripcion: "Explorar la manipulación de objetos con los pies y por el suelo, agregarle un condimento a su malabar, o saber de qué se trata el antipodismo… Técnica, exploración, movimiento y creación de secuencias.", 
-        pic: "/img/talleres/rocio.jpg"
       }
     ]
 
@@ -130,9 +127,9 @@ block contenido
     
     ts.on('click', (e) => e.target.closest('.taller').classList.toggle('activo'))
   
-  if !celu
-    script.
-      ts.on('mouseenter', (e) => e.target.closest('.taller').classList.add('activo'))
-      ts.on('mouseleave', (e) => e.target.closest('.taller').classList.remove('activo'))
+  //- if !celu
+  //-   script.
+  //-     ts.on('mouseenter', (e) => e.target.closest('.taller').classList.add('activo'))
+  //-     ts.on('mouseleave', (e) => e.target.closest('.taller').classList.remove('activo'))
     
     //- ts.append('img').attr('src', d => d.pic)
