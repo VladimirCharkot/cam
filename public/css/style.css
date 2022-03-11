@@ -624,7 +624,7 @@ body {
     border-bottom-left-radius: 3em;
     background-size: cover;
     background-position: center;
-    background-color: #33a8d0;
+    background-color: #69b9ea;
     background-blend-mode: none;
     transition: 1s; }
     #talleres .taller div p {
@@ -636,12 +636,12 @@ body {
     #talleres .taller.activo div p {
       opacity: 1; }
   #talleres .taller h3, #talleres .taller h4 {
-    font-family: 'Zilla Slab Highlight'; }
+    font-family: 'Lulo'; }
   #talleres .taller h3 {
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 0; }
   #talleres .taller h4 {
-    font-size: 2em;
+    font-size: 1.2em;
     margin: .3em 0; }
 
 body {
