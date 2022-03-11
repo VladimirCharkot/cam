@@ -20,6 +20,10 @@ router.get('/:lang/seminarios', [logaccess, async (req, res) => {
   res.render('seminarios')
 }])
 
+router.get('/:lang/talleres', [logaccess, async (req, res) => {
+  res.render('talleres')
+}])
+
 router.get('/:lang/inscripciones', [logaccess, async (req, res) => {
   let titulos = {
     es: 'CAM22 — Inscripciones',

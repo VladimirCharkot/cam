@@ -1,0 +1,41 @@
+#talleres
+
+  .taller
+    padding: 0 20vw
+    margin: 5em 0
+    div
+      cursor: pointer
+      border: 3px solid
+      margin: 1em
+      padding: 2em
+      min-height: 12em
+      display: flex
+      align-items: center
+
+      border-top-right-radius: 3em
+      border-bottom-left-radius: 3em
+      background-size: cover
+      background-position: center
+      background-color: #33a8d0
+      background-blend-mode: luminosity
+      transition: 1s
+
+      p
+        opacity: 0
+        transition: 1s
+        font-family: 'Lulo'
+
+    &.activo
+      div
+        background-blend-mode: saturation
+        p
+          opacity: 1
+
+    h3, h4
+      font-family: 'Zilla Slab Highlight'
+    h3
+      font-size: 3em
+      margin-bottom: 0
+    h4
+      font-size: 2em
+      margin: .3em 0

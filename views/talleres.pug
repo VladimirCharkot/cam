@@ -1,0 +1,135 @@
+extends layout
+
+block contenido
+
+  .articulo
+    h1 Talleres
+    p(style="text-align: center;") Estos son los talleres invitados confirmados. No es la lista definitiva... Todavía faltan los postulantes! 
+    p(style="text-align: center;") Querés postularte? #[a(href='/es/postular') Click acá]
+  hr
+  #talleres
+
+  script(src="https://cdn.jsdelivr.net/npm/d3@7")
+  script.
+    const talleres = [
+      {
+        taller: "Siteswap / Numerología", 
+        docente: "Pablo Brun", 
+        descripcion: "El Siteswap o Notacion Transposicional es una herramienta teórica que nos ayuda a describir patrones malabarísticos y, gracias a esto, crear nuevos trucos y movimientos", 
+        pic: "/img/talleres/pablo_siteswap.jpg"
+      },
+      {
+        taller: "Técnicas de malabares con pelotas", 
+        docente: "Panda", 
+        descripcion: "Espacio de investigación técnica con pelotas. Metodología y guía para el entrenamiento. Liberation ludica e improvisación.", 
+        pic: "/img/talleres/panda.jpg"
+      },
+      {
+        taller: "Antispin", 
+        docente: "Brenda Corso", 
+        descripcion: "Geometría sagrada. Sobre giros entre espacio, cuerpo y objeto. Para aprender desde la técnica las infinitas posibilidades que se pueden aplicar a la práctica.", 
+        pic: "/img/talleres/bren_antispin.jpg"
+      },
+      {
+        taller: "¿Cuánto improvisamos en una improvisación?", 
+        docente: "Juan Molina Neumann", 
+        descripcion: "El taller busca reconocer los movimientos que tenemos automatizados en nuestros cuerpos. Entender esas acciones que utilizamos cuando nos encontramos en riesgo. ¿Que es fluir? ¿Sobre qué fluímos y como?", 
+        pic: "/img/talleres/juan.jpg"
+      },
+      {
+        taller: "Moviendose con objetos", 
+        docente: "Liza Van Brakel", 
+        descripcion: "Este taller de malabares está enfocado a moverte dentro de tus malabares. Exploramos todo lo que no sea malabarismo técnico con patrones/cascadas, aquello donde menos usamos nuestras manos.", 
+        pic: "/img/talleres/liza.jpg"
+      },
+      {
+        taller: "(Des)Equilibrios con clavas", 
+        docente: "Marius Dince", 
+        descripcion: "¿Cómo llegamos al equilibrio?  ¿Cómo lo sostenemos? ¿Cómo lo transformamos y jugamos en el proceso? Encontremos juntos distintos puntos de equilibrios...", 
+        pic: "/img/talleres/marius.jpg"
+      },
+      {
+        taller: "Devil Stick de principio a fin", 
+        docente: "Alejandra Parada (Ale Golo)", 
+        descripcion: "Entrá sin devilstick, salí con tu propio juguete, trucos y la técnica para seguir creando.", 
+        pic: "/img/talleres/alejandra.jpg"
+      },
+      
+      {
+        taller: "Pirofagia, seguridad y manipulación con fuego", 
+        docente: "Brenda Corso", 
+        descripcion: "Una introducción al conocimiento corporal a través de la pirofagia, el arte de sentir el fuego. Probá la sensación del fuego en la piel, probá su sabor en la boca.", 
+        pic: "/img/talleres/bren_pirofagia.jpg"
+      },
+      
+      {
+        taller: "Variando", 
+        docente: "Oscar Herrera", 
+        descripcion: "¿Juntémonos a jugar cartas? Practicamos sometidos al arbitrio azaroso de un naipe que contiene todas las posibilidades de giro. Aplicable para otros objetos como clavas, devil sticks, argollas, etc.", 
+        pic: "/img/talleres/oscar.jpg"
+      },
+      {
+        taller: "Pases con clavas", 
+        docente: "Pablo Brun", 
+        descripcion: "En este taller presentaremos el método de aprendizaje más equilibrado y completo para todas las formas más tradicionales de malabarismo entre 2 personas con clavas.", 
+        pic: "/img/talleres/pablo_pases.jpg"
+      },
+      {
+        taller: "Suicidas y genocida (Diábolo)", 
+        docente: "Emi Espinassi", 
+        descripcion: "Iniciación y profundización multinivel a los trucos genocidas y suicidas, desde cero y avanzados, con progresiones para poder seguir investigando de manera autodidacta", 
+        pic: "/img/talleres/emi.jpg"
+      },
+      {
+        taller: "Swing y manipulación con objetos de flujo", 
+        docente: "Joaco Alvarez (Niño Poi)", 
+        descripcion: "Diferentes estilos de juego: anti-spin, no beat, body tracers, contacto, cat eyes y aislamientos, con sus distintos niveles de dificultad mas un modelo de exploración a través de las bases del swing.", 
+        pic: "/img/talleres/joaco.jpg"
+      },
+      
+      {
+        taller: "Práctica de movimiento con objetos", 
+        docente: "Ignacio García", 
+        descripcion: "Espacio en donde se compartirá un método de entrenamiento. Nos centraremos en los motores corporales y la relación con el espacio y los objetos.", 
+        pic: "/img/talleres/ignacio.jpg"
+      },
+      
+      {
+        taller: "Malabar de rebote", 
+        docente: "Pablo Brun", 
+        descripcion: "El malabarismo de rebote es la técnica que invierte las reglas mas básicas de la física, jugando con ellas y multiplicando las posibilidades técnicas y creativas en el momento de malabarear.", 
+        pic: "/img/talleres/pablo_rebote.jpg"
+      },
+      
+      {
+        taller: "Hula", 
+        docente: "Reina Ruben Ungar Huichacura", 
+        descripcion: "Taller de Hula Hoops. Entrenamiento de resistencia. Movimientos en distintos ritmos. Desplazamientos. Lanzamientos. Recibimientos. Secuencias monohoops. Final Exposición de lo compartido en el taller. ", 
+        pic: "/img/talleres/reina.jpg"
+      },
+      {
+        taller: "Antipodismo", 
+        docente: "Rocío Contreras", 
+        descripcion: "Explorar la manipulación de objetos con los pies y por el suelo, agregarle un condimento a su malabar, o saber de qué se trata el antipodismo… Técnica, exploración, movimiento y creación de secuencias.", 
+        pic: "/img/talleres/rocio.jpg"
+      }
+    ]
+
+    //- const base = document.querySelector('#talleres')
+    const ts = d3.select('#talleres')
+        .selectAll('div')
+      .data(talleres)
+      .enter()
+        .append('div').classed('taller', true)
+        
+    ts.append('h3').text(d => d.taller)
+    ts.append('h4').text(d => d.docente)
+        
+    ts.append('div').style('background-image', d => `url(${d.pic})`)
+      .append('p').text(d => d.descripcion)
+    
+    ts.on('click', (e) => e.target.closest('.taller').classList.toggle('activo'))
+    ts.on('mouseenter', (e) => e.target.closest('.taller').classList.add('activo'))
+    ts.on('mouseleave', (e) => e.target.closest('.taller').classList.remove('activo'))
+    
+    //- ts.append('img').attr('src', d => d.pic)
