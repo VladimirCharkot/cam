@@ -17,7 +17,11 @@ const redis = require("./redisclient")
 
 
 router.get('/:lang/seminarios', [logaccess, async (req, res) => {
-  res.render('seminarios')
+  res.render('seminarios'{
+    titulo: 'Talleres',
+    lang: lang,
+    celu: req.useragent.isMobile
+  })
 }])
 
 router.get('/:lang/talleres', [logaccess, async (req, res) => {

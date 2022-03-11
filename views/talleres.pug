@@ -129,7 +129,10 @@ block contenido
       .append('p').text(d => d.descripcion)
     
     ts.on('click', (e) => e.target.closest('.taller').classList.toggle('activo'))
-    ts.on('mouseenter', (e) => e.target.closest('.taller').classList.add('activo'))
-    ts.on('mouseleave', (e) => e.target.closest('.taller').classList.remove('activo'))
+  
+  if !celu
+    script.
+      ts.on('mouseenter', (e) => e.target.closest('.taller').classList.add('activo'))
+      ts.on('mouseleave', (e) => e.target.closest('.taller').classList.remove('activo'))
     
     //- ts.append('img').attr('src', d => d.pic)
