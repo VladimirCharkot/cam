@@ -71,7 +71,8 @@ html {
     #portada #telon .lang {
       position: absolute;
       top: 1vh;
-      right: 1vw; }
+      right: 1vw;
+      z-index: 1; }
     #portada #telon #titulo {
       text-shadow: rgba(10, 189, 240, 0.3) 3px 3px 0px, rgba(254, 1, 1, 0.3) -3px -3px 0px, rgba(240, 200, 0, 0.3) 3px -3px 0px;
       text-align: left;
