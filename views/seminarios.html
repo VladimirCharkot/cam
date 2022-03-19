@@ -319,6 +319,13 @@
       left: 0;
     }
 
+    #header{
+      position: fixed;
+      display: flex;
+      align-items: center;
+      z-index: 1;
+    }
+
     .icon{
       width: 10vw;
       height: 10vh;
@@ -326,27 +333,25 @@
       background-size: contain;
       background-repeat: no-repeat;
       margin: 5vw;
-      z-index: 1;
-      position: fixed;
     }
 
-    .explainer{
-      left: 20vw;
+    .explainer p, .explainer h1{
+      /* left: 20vw; */
       font-family: 'Inconsolata';
       transition: 2s;
-      position: fixed;
+      /* position: fixed; */
     }
 
     h1{
-      top: 5vh;
+      /* top: 5vh; */
     }
 
     #instructivo1{
-      top: 12vh;
+      /* top: 12vh; */
     }
 
     #instructivo2{
-      top: 15vh;
+      /* top: 15vh; */
     }
 
   </style>
@@ -354,11 +359,16 @@
 
   <svg> </svg>
 
+  <div id="header">
+    <a href="/"><div class="icon"></div></a>
+    <div class="explainer" >
+      <h1 style="opacity: 0;">Seminarios CAM22</h1>
+      <p id="instructivo1" style="opacity: 0;">Navegá con las flechas o el zoom</p>
+      <p id="instructivo2" style="opacity: 0;">Clickeá para más info</p>
+  </div>
+  </div>
 
-  <a href="/"><div class="icon"></div></a>
-  <h1 class="explainer" style="opacity: 0;">Seminarios CAM22</h1>
-  <p class="explainer" id="instructivo1" style="opacity: 0;">Navegá con las flechas o el zoom</p>
-  <p class="explainer" id="instructivo2" style="opacity: 0;">Clickeá para más info</p>
+
   <script>
     const titulo = document.querySelector('h1')
     const instructivo1 = document.querySelector('#instructivo1')
