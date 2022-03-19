@@ -121,12 +121,147 @@
       opacity: 1;
     }
 
-    .foto{
-      transform: translate(810px, -35px);
+    .taller.activo .foto{
       opacity: 0.5;
     }
 
+    .foto{
+      transform: translate(810px, -105px);
+      opacity: 0;
+    	overflow: hidden;
+    	margin: 0 auto;
+      --blend-color-1: blue;
+      --blend-color-2: red;
+      --blend-color-3: green;
+      --blend-color-4: cyan;
+      --blend-color-5: magenta;
+      --escala: 0.4;
+      --gap-horizontal: 0px;
+      --gap-vertical: 5px;
+      --blend-mode-1: color-burn;
+      --blend-mode-2: color-dodge;
+      --blend-mode-3: hard-light;
+      --blend-mode-4: luminosity;
+      --blend-mode-5: multiply;
+      /* --time-anim: 1s; */
+    }
+
     .foto image{
+      /* top: calc(-1 * var(--gap-vertical));
+      left: calc(-1 * var(--gap-horizontal)); */
+      width: calc(var(--escala) * 484px);
+      height: calc(var(--escala) * 612px);
+      background: var(--blend-color-1);
+      mix-blend-mode: var(--blend-mode-1);
+      animation-delay: var(--delay);
+    }
+
+    .foto image:nth-child(2) {
+    	background: var(--blend-color-2);
+    	mix-blend-mode: var(--blend-mode-2);
+    }
+
+    .foto image:nth-child(3) {
+    	background: var(--blend-color-3);
+    	mix-blend-mode: var(--blend-mode-3);
+    }
+
+    .foto image:nth-child(4) {
+    	background: var(--blend-color-4);
+    	mix-blend-mode: var(--blend-mode-4);
+    }
+
+    .foto image:nth-child(5) {
+    	background: var(--blend-color-5);
+    	mix-blend-mode: var(--blend-mode-5);
+    }
+
+    .foto image:nth-child(2) {
+    	transform: translate3d(var(--gap-horizontal),0,0);
+    	animation: glitch-anim-1-horizontal var(--time-anim) infinite linear alternate;
+    }
+
+    .foto > image:nth-child(3) {
+    	transform: translate3d(calc(-1 * var(--gap-horizontal)),0,0);
+    	animation: glitch-anim-1-horizontal calc(var(--time-anim)*3.2) infinite reverse alternate;
+    }
+
+    .foto > image:nth-child(4) {
+    	transform: translate3d(195px, 260px, 0) scale3d(-1,-1,1);
+    	animation: glitch-anim-1-horizontal calc(var(--time-anim)*2.1) infinite linear alternate;
+    }
+
+    .foto > image:nth-child(5) {
+    	animation: glitch-anim-flash 0.5s steps(1,end) infinite;
+    }
+
+    @keyframes glitch-anim-1-horizontal {
+    	0% {
+    		-webkit-clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
+    		clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
+    	}
+    	10% {
+    		-webkit-clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
+    		clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
+    	}
+    	20% {
+    		-webkit-clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
+    		clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
+    	}
+    	30% {
+    		-webkit-clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%);
+    		clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%);
+    	}
+    	40% {
+    		-webkit-clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+    		clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+    	}
+    	50% {
+    		-webkit-clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+    		clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+    	}
+    	60% {
+    		-webkit-clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+    		clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+    	}
+    	70% {
+    		-webkit-clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+    		clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+    	}
+    	80% {
+    		-webkit-clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+    		clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+    	}
+    	90% {
+    		-webkit-clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+    		clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+    	}
+    	100% {
+    		-webkit-clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+    		clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+    	}
+    }
+
+    @keyframes glitch-anim-flash {
+    	0% {
+    		opacity: 0.2;
+    		transform: translate3d(var(--gap-horizontal), var(--gap-vertical), 0);
+    	}
+    	33%, 100% {
+    		opacity: 0;
+    		transform: translate3d(0,0,0);
+    	}
+    }
+
+    /* .glitch__img:nth-child(n+2) {
+    	opacity: 0;
+    }
+
+    .glitch:hover .glitch__img:nth-child(n+2) {
+    	opacity: 1;
+    } */
+
+    /* .foto image{
       --escala: 0.3;
       background: url('/img/seminarios/seba.png');
       background-size: 100%;
@@ -137,10 +272,10 @@
       left: 0;
       opacity: 0;
       transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
-    }
+    } */
 
     .taller.activo .foto image{
-      filter: url(#glitch);
+      /* filter: url(#glitch); */
       opacity: 1;
     }
 
@@ -196,91 +331,9 @@
     }
 
   </style>
-  <svg>
-    <defs>
 
-    <!-- <radialGradient id="gradiente" cx="0.25" cy="0.25" r="0.25">
-      <stop offset="0%" stop-color="#B983FF"/>
-      <stop offset="20%" stop-color="#D69EFF"/>
-      <stop offset="40%" stop-color="#F3B9FF"/>
-      <stop offset="50%" stop-color="#FFD5FF"/>
-      <stop offset="60%" stop-color="#FFF2FF"/>
-      <stop offset="70%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#FFFFFF"/>
-    </radialGradient> -->
-
-    <filter filterUnits="userSpaceOnUse" id="turbulencia" x="0" y="0" width="100%" height="100%">
-      <feTurbulence id="turbulencia_base" numOctaves="3" seed="2" baseFrequency="0.02 0.05"></feTurbulence>
-      <feDisplacementMap scale="20" in="SourceGraphic"></feDisplacementMap>
-    </filter>
-
-    <animate xlink:href="#turbulencia_base" attributeName="baseFrequency" dur="24s" keyTimes="0;0.5;1" values="0.01 0.02;0.02 0.03;0.01 0.03" repeatCount="indefinite"/>
-
-
-    <!-- GLITCH -->
-
-    <filter id="glitch">
-      <feFlood flood-color="black" result="black" />
-      <feFlood flood-color="red" result="flood1" />
-      <feFlood flood-color="limegreen" result="flood2" />
-      <feOffset in="SourceGraphic" dx="3" dy="0" result="off1a"/>
-      <feOffset in="SourceGraphic" dx="2" dy="0" result="off1b"/>
-      <feOffset in="SourceGraphic" dx="-3" dy="0" result="off2a"/>
-      <feOffset in="SourceGraphic" dx="-2" dy="0" result="off2b"/>
-      <feComposite in="flood1" in2="off1a" operator="in"  result="comp1" />
-      <feComposite in="flood2" in2="off2a" operator="in" result="comp2" />
-
-      <feMerge x="0" width="142px" result="merge1">
-      <feMergeNode in = "black" />
-      <feMergeNode in = "comp1" />
-      <feMergeNode in = "off1b" />
-
-      <animate
-        attributeName="y"
-          id = "y"
-          dur ="4s"
-          values = '104px; 104px; 30px; 105px; 30px; 2px; 2px; 50px; 40px; 105px; 105px; 20px; 6px; 40px; 104px; 40px; 70px; 10px; 30px; 104px; 102px'
-          keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
-          repeatCount = "indefinite" />
-
-      <animate attributeName="height"
-          id = "h"
-          dur ="4s"
-          values = '10px; 0px; 10px; 30px; 50px; 0px; 10px; 0px; 0px; 0px; 10px; 50px; 40px; 0px; 0px; 0px; 40px; 30px; 10px; 0px; 50px'
-          keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
-          repeatCount = "indefinite" />
-      </feMerge>
-
-
-    <feMerge x="0" width="142px" y="60px" height="65px" result="merge2">
-      <feMergeNode in = "black" />
-      <feMergeNode in = "comp2" />
-      <feMergeNode in = "off2b" />
-
-      <animate attributeName="y"
-          id = "y"
-          dur ="4s"
-          values = '103px; 104px; 69px; 53px; 42px; 104px; 78px; 89px; 96px; 100px; 67px; 50px; 96px; 66px; 88px; 42px; 13px; 100px; 100px; 104px;'
-          keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513; 0.548; 0.577; 0.613; 1'
-          repeatCount = "indefinite" />
-
-        <animate attributeName="height"
-          id = "h"
-          dur = "4s"
-          values = '0px; 0px; 0px; 16px; 16px; 12px; 12px; 0px; 0px; 5px; 10px; 22px; 33px; 11px; 0px; 0px; 10px'
-          keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513;  1'
-          repeatCount = "indefinite" />
-      </feMerge>
-
-      <feMerge>
-        <feMergeNode in="SourceGraphic" />
-        <feMergeNode in="merge1" />
-        <feMergeNode in="merge2" />
-      </feMerge>
-    </filter>
-
-    </defs>
-  </svg>
+  
+  <svg> </svg>
 
 
   <a href="/"><div class="icon"></div></a>
@@ -456,6 +509,7 @@
 
 
     let centrar_taller = t => {
+        window.centrado = seminarios.map(s => s.id).indexOf(t.id)
         svg.transition().duration(750).call(zoom.translateTo, t.coordenadas.x + 550, t.coordenadas.y + 200)
         setTimeout(() => svg.transition().duration(750).call(zoom.scaleTo, 0.4), 750)
       }
@@ -541,7 +595,16 @@
 
       let foto = g.append("g")
           .classed("foto", true)
-        .append("image")
+          .style("--time-anim", `${Math.random() + 0.5}s`)
+        foto.append("image")
+          .attr("href", t.foto)
+        foto.append("image")
+          .attr("href", t.foto)
+        foto.append("image")
+          .attr("href", t.foto)
+        foto.append("image")
+          .attr("href", t.foto)
+        foto.append("image")
           .attr("href", t.foto)
 
       let titulo = g.append("g")
