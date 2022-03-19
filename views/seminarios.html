@@ -330,13 +330,49 @@
       position: fixed;
     }
 
+    .explainer{
+      left: 20vw;
+      font-family: 'Inconsolata';
+      transition: 2s;
+      position: fixed;
+    }
+
+    h1{
+      top: 5vh;
+    }
+
+    #instructivo1{
+      top: 12vh;
+    }
+
+    #instructivo2{
+      top: 15vh;
+    }
+
   </style>
 
-  
+
   <svg> </svg>
 
 
   <a href="/"><div class="icon"></div></a>
+  <h1 class="explainer" style="opacity: 0;">Seminarios CAM22</h1>
+  <p class="explainer" id="instructivo1" style="opacity: 0;">Navegá con las flechas o el zoom</p>
+  <p class="explainer" id="instructivo2" style="opacity: 0;">Clickeá para más la info</p>
+  <script>
+    const titulo = document.querySelector('h1')
+    const instructivo1 = document.querySelector('#instructivo1')
+    const instructivo2 = document.querySelector('#instructivo2')
+    setTimeout(() => titulo.style.opacity = 1,1000)
+    setTimeout(() => instructivo1.style.opacity = 1,2000)
+    setTimeout(() => instructivo2.style.opacity = 1,3000)
+    setTimeout(() => titulo.style.opacity = 0.2,6000)
+    setTimeout(() => titulo.style.transform = "translateY(3vh)",6000)
+    setTimeout(() => instructivo1.style.opacity = 0,6000)
+    setTimeout(() => instructivo2.style.opacity = 0,6000)
+  </script>
+
+
   <div class="flecha" id="izquierda"></div>
   <div class="flecha" id="derecha"></div>
 
