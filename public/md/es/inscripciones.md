@@ -1,6 +1,6 @@
 # Inscripciones
 
-La inscripción como convencionista incluye el acceso al camping los seis días que dura el evento + la posibilidad de llegar un día antes y retirarse un día después, y la entrada a talleres y espectáculos. Los seminarios se pagan a parte. La alimentación no está incluída y queda a gestión y criterio de cada quien. El campingo que nos recibe tiene servicio de buffet con opción vegetariana.
+La inscripción como convencionista incluye el acceso al camping los seis días que dura el evento + la posibilidad de llegar un día antes y retirarse un día después, y la entrada a talleres y espectáculos. Los seminarios se pagan a parte. La alimentación no está incluída y queda a gestión y criterio de cada quien. El camping que nos recibe tiene servicio de buffet con opción vegetariana.
 
 Los valores de las entradas varían según el período donde te inscribas:
 - 2 de marzo al 31 de marzo: **$5.500**
