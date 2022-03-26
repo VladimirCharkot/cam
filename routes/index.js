@@ -1,5 +1,5 @@
 const express = require('express')
-const md = require('markdown-it')()
+const md = require('markdown-it')({html: true})
 const emoji = require('markdown-it-emoji');
 const attrs = require('markdown-it-attrs');
 const fs = require('fs/promises')
