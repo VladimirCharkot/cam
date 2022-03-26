@@ -4,6 +4,11 @@
 
 Le camping Don Osvaldo sera celui qui recevra cette année le CAM avec tous ses participants. Il est situé à seulement 200 mètres de la lagune Mar Chiquita et à 15 minutes de la gare routière de la ville de Miramar. C'est une propriété qui a tous les services pour accueillir et contenir de grands contingents de vacanciers et des événements massifs. Chaque parcelle dispose d'une connexion 220 volts, matériel table et chaises, barbecue, lumière la nuit et une ombre importante pour le camping. Il dispose également de deux piscines, d'une cantine, d'un espace barbecue et de sanitaires à proximité du camping. Vous pouvez visiter leur [page facebook](https://www.facebook.com/Camping-Don-Osvaldo-205979423659659) pour jeter un œil.
 
+<script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+<video width=100% style="margin: 2em auto;" playsinline controls data-poster="/img/artículos/donosvaldo.webp">
+  <source src="/video/videocamping.mp4" type="video/mp4" />
+</video>
+
 
 Accompagnement du centre culturel et bibliothèque populaire la escuelita :
 

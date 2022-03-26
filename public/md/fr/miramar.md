@@ -11,3 +11,5 @@ Outre la plage et le front de mer, elle offre plusieurs musées et sites géolog
 La lagune de Mar Chiquita est l'une des plus grandes zones humides salines du monde. Ainsi, le territoire abrite une biodiversité unique (plus de 300 espèces fauniques recensées). Les distances étant réduites, son front de mer est choisi pour les promenades et le vélo.
 
 En savoir plus sur la localité [ici](https://www.cordobaturismo.gov.ar/localidad/miramar-de-ansenuza/).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FdU7rv9QR1o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

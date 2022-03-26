@@ -11,3 +11,5 @@ Besides beach and waterfront, it offers several museums and geological and histo
 The Mar Chiquita Lagoon is one of the biggest saline wetlands in the world. Thus, the area encompasses a unique biodiversity (more than 300 wildlife species accounted for). As the distances are small, its waterfront is chosen for strolls and biking.
 
 Find out more about the locality [here](https://www.cordobaturismo.gov.ar/localidad/miramar-de-ansenuza/).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FdU7rv9QR1o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

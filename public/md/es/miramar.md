@@ -11,3 +11,7 @@ Además de playa y costanera, ofrece varios museos y sitios geológicos e histó
 La Laguna de Mar Chiquita es uno de los humedales salinos más grandes del mundo. Por eso el área cuenta con una biodiversidad única (más de 300 especies de fauna registradas). Como las distancias en la zona son cortas, su costanera es elegida para caminatas y paseos en bici.
 
 Encontrá [acá](https://www.cordobaturismo.gov.ar/localidad/miramar-de-ansenuza/) más información sobre la localidad.
+
+También te recomendamos el siguiente video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FdU7rv9QR1o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

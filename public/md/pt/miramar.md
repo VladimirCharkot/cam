@@ -11,3 +11,5 @@ Além da praia e orla marítima, oferece vários museus e sítios geológicos e 
 A Laguna de Mar Chiquita é uma das maiores zonas húmidas salinas do mundo. É por isso que a área possui uma biodiversidade única (mais de 300 espécies da fauna registradas). Como as distâncias na área são curtas, sua orla é escolhida para caminhadas e passeios de bicicleta.
 
 Encontre [aqui](https://www.cordobaturismo.gov.ar/localidad/miramar-de-ansenuza/) mais informações sobre a cidade.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FdU7rv9QR1o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
