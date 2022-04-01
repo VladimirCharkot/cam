@@ -4,8 +4,8 @@ La inscripción como convencionista incluye el acceso al camping los seis días 
 
 Los valores de las entradas varían según el período donde te inscribas:
 
-- 2 de marzo al 18 de abril: **$5.500**
-- ~~1 de de abril en adelante: **$6.500**~~ ¡¡Extendimos el precio promo hasta un día antes de la conve!! 🥳
+- 2 de marzo al 31 de marzo: **$5.500**
+- 1 de de abril en adelante: ~~**$6.500**~~ **$5.500** ¡¡Extendimos el precio promo hasta un día antes de la conve!! 🥳
 - En puerta: **$6.500**
 
 
