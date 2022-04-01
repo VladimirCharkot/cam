@@ -3,8 +3,8 @@
 A inscrição como participante inclui o acesso ao parque de campismo durante os seis dias de duração do evento + a possibilidade de chegar no dia anterior e sair no dia seguinte, e entrada em workshops e espetáculos. Os seminários são pagos à parte. A alimentação não está incluída e é deixada à gestão e discrição de cada pessoa. O parque de campismo que nos recebe dispõe de serviço de buffet com opção vegetariana.
 
 Os valores dos ingressos variam de acordo com o período em que você se cadastra:
-- 2 a 31 de março: **ARS$ 5.500**
-- A partir de 1º de abril: **ARS$ 6.500**
+- 2 de março a 18 de abril: **ARS$ 5.500**
+- No lugar: **ARS$ 6.500**
 
 Depois de se inscrever você deve pagar parte do ingresso para congelar o preço de sua inscrição e pagar o restante posteriormente ou até mesmo na porta da convenção (apresentando o primeiro ingresso de pagamento). É **importante** que você leve em consideração que o preço **NÃO CONGELADO APENAS COM A INSCRIÇÃO, VOCÊ DEVE PAGAR NO MÍNIMO ARS$1000**.
 

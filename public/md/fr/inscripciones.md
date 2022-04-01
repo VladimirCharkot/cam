@@ -3,8 +3,8 @@
 L'inscription en tant que participant comprend l'accès au camping pendant les six jours que dure l'événement + la possibilité d'arriver la veille et de repartir le lendemain, et l'accès aux ateliers et spectacles. Les séminaires sont payés séparément. La nourriture n'est pas incluse et est laissée à la gestion et à la discrétion de chacun. Le camping qui nous accueille propose un service de buffet avec une option végétarienne.
 
 Les valeurs des tickets varient selon la période où vous vous inscrivez :
-- 2 mars au 31 mars : **5500 $ ARS**
-- À partir du 1er avril : **6500 $ ARS**
+- 2 mars au 18 avril : **5500 $ ARS**
+- Sur place : **6500 $ ARS**
 
 Une fois inscrit vous devez payer une partie du billet pour figer le prix de votre inscription et payer le reste plus tard ou même à la porte de la convention (en présentant le premier billet de paiement). Il est ** important ** que vous teniez compte du fait que le prix ** N'EST PAS GELÉ UNIQUEMENT AVEC L'INSCRIPTION, VOUS DEVEZ PAYER AU MOINS 1 000 $ ARS **.
 

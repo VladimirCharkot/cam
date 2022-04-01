@@ -4,11 +4,8 @@ Registration as attendee includes access to the campsite for the six days that t
 
 The values ​​of the tickets vary according to the period where you register:
 
-- March 2 to March 31: **ARS$5,500**
-{.grande}
-
-- April 1 onwards: **ARS$6,500**
-{.grande}
+- March 2nd to April 18th: **ARS$5,500**
+- On site: **ARS$6,500**
 
 Once you register you must pay part of the ticket to freeze the price of your registration and pay the rest later or even at the door of the convention (by presenting the first payment ticket). It is **important** that you take into account that the price **NOT FROZEN ONLY WITH REGISTRATION, YOU MUST PAY AT LEAST ARS$1000**.
 
