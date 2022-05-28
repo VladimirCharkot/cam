@@ -55,7 +55,7 @@ html {
 
 #portada.mobile .lang img {
   width: 5vh;
-  margin: 1vw; }
+  margin: 3vw; }
 
 #portada {
   width: 100vw;
@@ -304,6 +304,9 @@ hr {
   #inscripciones ul p, #postulaciones ul p {
     padding: 0; }
 
+#inscripciones ol, #postulaciones ol {
+  list-style: disclosure-closed; }
+
 #inscripciones .btn, #postulaciones .btn {
   letter-spacing: 8px;
   font-size: 2em;
@@ -325,6 +328,10 @@ hr {
 
 #inscripciones .jesus, #postulaciones .jesus {
   display: none; }
+
+s {
+  text-decoration: line-through;
+  text-decoration-thickness: 3px; }
 
 @media only screen and (max-width: 800px) {
   #inscripciones .btn {

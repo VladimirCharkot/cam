@@ -70,6 +70,24 @@ router.get('/:lang/postulaciones', [logaccess, async (req, res) => {
   })
 }])
 
+router.get('/:lang?/galeria', [logaccess, lenguaje, async (req, res) => {
+  let titulos = {
+    es: 'CAM22 — Galería',
+    en: 'AJC22 — Galery',
+    fr: 'CAJ22 — Galery',
+    pt: 'CAM22 — Galery'
+  }
+
+  let lang = req.params.lang
+
+  res.render('galeria', {
+    titulo: titulos[lang],
+    lang: lang,
+    celu: req.useragent.isMobile,
+    galeria: _.chunk(_.range(212), 213/3)
+  })
+
+}])
 
 router.get('/:lang?/historia', [logaccess, lenguaje, async (req, res) => {
 
