@@ -8,9 +8,9 @@ block contenido
     if lang == "en"
       h2 CAM22 Gallery
     if lang == "fr"
-      h2 Des photos CAJ22
+      h2 Galerie CAJ22
     if lang == "pt"
-      h2 As fotos CAM22
+      h2 Galeria CAM22
     .galeria
       each lista in galeria
         .columna
@@ -22,11 +22,15 @@ block contenido
     #cerrar(onclick="cerrar()") X
     img
     #derecha(onclick="proxima()")
+    #descargar(onclick="descargar()")
     
   script.
     let visualizador = document.querySelector('#visualizador')
     let imagen = document.querySelector('#visualizador img')
     
+    let descargar = () => {
+      document.location = imagen.getAttribute('src')
+    }
     let cerrar = () => {
       visualizador.className = 'desactivado'
     }

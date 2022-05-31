@@ -374,6 +374,7 @@ s {
     margin: calc(10vw/6); }
 
 #visualizador {
+  z-index: 5;
   transition: 1s;
   position: fixed;
   top: 0;
@@ -396,7 +397,7 @@ s {
     right: 0;
     margin: 1vw 2vw;
     color: white;
-    font-size: 2em;
+    font-size: clamp(1em, 10vw, 5em);
     cursor: pointer; }
   #visualizador img {
     max-width: 80vw;
@@ -416,6 +417,16 @@ s {
     transform: rotate(-135deg); }
   #visualizador #derecha {
     transform: rotate(45deg); }
+  #visualizador #descargar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1vw 2vw;
+    cursor: pointer;
+    width: 128px;
+    height: 128px;
+    background-image: url(/img/icon/download.png);
+    background-size: cover; }
 
 #cuete .foto {
   background-image: url(/img/orga/cuete.jpg);

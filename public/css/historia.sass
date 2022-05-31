@@ -20,6 +20,7 @@
     margin: calc(10vw/6)
 
 #visualizador
+  z-index: 5
   transition: 1s
   position: fixed
   top: 0
@@ -42,7 +43,7 @@
     right: 0
     margin: 1vw 2vw
     color: white
-    font-size: 2em
+    font-size: clamp(1em, 10vw, 5em)
     cursor: pointer
   img
     max-width: 80vw
@@ -62,3 +63,13 @@
     transform: rotate(-135deg)
   #derecha
     transform: rotate(45deg)
+  #descargar
+    position: fixed
+    bottom: 0
+    right: 0
+    margin: 1vw 2vw
+    cursor: pointer
+    width: 128px
+    height: 128px
+    background-image: url(/img/icon/download.png)
+    background-size: cover
